@@ -6,11 +6,11 @@ Lars de Roos | Web Apps Project
 
 ### Problem statement
 
-Het aantal studenten dat zich aansluit bij studentenverenigingen daalt al een tijd. Dit komt door slechte publiciteit en de kosten die een lidmaatschap met zich meebrengen. Toch wordt er op internet vaak de vraag gesteld “welke studentenvereniging past bij mij?”. Om hierop in te spelen is deze web applicatie bedacht. Hij dient als een soort kieswijzer voor studentenverenigingen, om zo als student de perfecte match te vinden. 
+Het aantal studenten dat zich aansluit bij studentenverenigingen daalt al een tijd. Dit komt door slechte publiciteit en de kosten die een lidmaatschap met zich meebrengen. Toch wordt er op internet vaak de vraag gesteld “welke studentenvereniging past bij mij?”. Om hierop in te spelen is deze web applicatie bedacht. Het dient als een soort kieswijzer voor studentenverenigingen, om zo als student de perfecte match te vinden. 
 
 ### Solution
 
-Kieswijzer voor studentenverenigingen voor nieuwe en toekomstige studenten.
+Kieswijzer voor studentenverenigingen voor studenten.
 
 ##### Visual sketch
 Komt nog
@@ -42,6 +42,3 @@ Komt nog
 - Hardest parts	
 	- Lastig om snel data te vinden
 	- Geen API's 
-
-	
-	
