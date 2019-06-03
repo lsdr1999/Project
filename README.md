@@ -36,7 +36,7 @@ Komt nog
 - External components
 	- Nog niet bekend
 - Similar websites/ideas
-	- [Studentenverenigingen van Amsterdam] (http://www.lidwordeninamsterdam.nl)
+	- [Studentenverenigingen van Amsterdam](http://www.lidwordeninamsterdam.nl)
 		- Doet hetzelfde als ik van plan ben, maar dan enkel voor Amsterdam. Implementatie op kleine schaal, toepassing voor mij mogelijk op dezelfde manier maar mogelijk op grotere schaal.
 
 - Hardest parts	
