@@ -11,9 +11,13 @@ Kieswijzer voor studentenverenigingen voor studenten.
 
 ##### Visual sketch
 ![](doc/af1.png)
+
 ![](doc/af2.png)
+
 ![](doc/af3.png)
+
 ![](doc/af4.png)
+
 
 ##### Main features
 - Kieswijzer (MVP)
