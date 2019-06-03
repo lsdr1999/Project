@@ -18,7 +18,7 @@ Kieswijzer voor studentenverenigingen voor studenten.
 ##### Main features
 - Kieswijzer (MVP)
 - Overzicht van alle studentenverenigingen (MVP)
-- Contact met adviseur (MVP)
+- Contact met adviseur (optional)
 
 ### Prerequisites
 
@@ -34,7 +34,9 @@ Kieswijzer voor studentenverenigingen voor studenten.
 	- Website
 	- Algemene beschrijving
 ##### External components
-- Nog niet bekend
+- Django
+- Socket (voor optionele gedeelte van chat)
+
 ##### Similar websites/ideas
 - [Studentenverenigingen van Amsterdam](http://www.lidwordeninamsterdam.nl)
 	- Doet hetzelfde als ik van plan ben, maar dan enkel voor Amsterdam. Implementatie op kleine schaal, toepassing voor mij mogelijk op dezelfde manier maar mogelijk op grotere schaal.
