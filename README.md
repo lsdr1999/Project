@@ -10,7 +10,10 @@ Het aantal studenten dat zich aansluit bij studentenverenigingen daalt al een ti
 Kieswijzer voor studentenverenigingen voor studenten.
 
 ##### Visual sketch
-Komt nog
+![](doc/af1.png)
+![](doc/af2.png)
+![](doc/af3.png)
+![](doc/af4.png)
 
 ##### Main features
 - Kieswijzer (MVP)
