@@ -33,7 +33,7 @@ Kieswijzer voor studentenverenigingen voor studenten.
 	- Aantal leden
 	- Jaar van oprichting
 	- Contributie
-	- Dagen
+	- Borreldagen
 	- Mailadres
 	- Website
 	- Algemene beschrijving
