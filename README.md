@@ -23,6 +23,7 @@ Kieswijzer voor studentenverenigingen voor studenten.
 - Kieswijzer (MVP)
 - Overzicht van alle studentenverenigingen (MVP)
 - Contact met adviseur (optional)
+- Studieverenigingen (optional)
 
 ### Prerequisites
 
