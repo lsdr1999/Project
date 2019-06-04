@@ -46,3 +46,4 @@ Niet van toepassing
 		- Korte algemene beschrijving (tekst)
 		- Antwoorden op kieswijzer (tekst)
 
+![](doc/af7.png)
