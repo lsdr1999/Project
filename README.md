@@ -1,5 +1,4 @@
 # Vo-keur 
-###### Working Title
 
 Lars de Roos | Web Apps Project
 
