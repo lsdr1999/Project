@@ -8,3 +8,12 @@ from django.db.models import Sum
 
 def index(request):
     return render(request, "index.html")
+
+def kieswijzer(request):
+    return render(request, "kieswijzer.html")
+
+def verenigingen(request):
+    return render(request, "verenigingen.html")
+
+def contact(request):
+    return render(request, "contact.html")
