@@ -2,6 +2,19 @@
 
 Lars de Roos | Web Apps Project
 
+# Week 2
+
+## Day 1
+
+In verband met Pinksteren is deze meeting verschoven naar een later tijdstip deze week.
+
+## Day 2
+
+<br>
+<br>
+<br>
+<br>
+
 # Week 1
 
 ## Day 0
@@ -55,4 +68,19 @@ Ook heb ik op deze dag een begin gemaakt met het vormgeven van mijn website. Omd
 ![](doc/pro5.png)
 
 ## Day 4
+
+De dingen die ik komende tijd heb uitgezocht en nog moet uitzoeken hebben vooral veel te maken met het opbouwen en presenteren van de data. Ik heb al zo veel mogelijk gelezen met betrekking tot het maken van kieswijzers en heb afgekeken van de grote bestaande websites die dergelijke kieswijzers aanbieden. Het lijstje:
+- Kieswijzer (hoe opbouwen)
+- Kieswijzer (hoe presenteren in html, met overgangen)
+- Kieswijzer (hoe antwoorden opslaan)
+- Kieswijzer (hoe conclusie trekken o.b.v. antwoorden)
+- Kieswijzer (hoe zorgen dat verenigingen hun mening geven op stellingen)
+- Verenigingen (hoe weergeven in html)
+- Overige leuke effecten en dergelijke in css, voor later in dit project
+
+## Day 5
+
+Afgelopen vrijdag hebben we een uitgebreide meeting gehad waarin we, met onze tutor, elkaar de protoypes hebben laten zien. Mijn website bevatte het nodige, men kon navigeren. Het doel voor komende week hebben we opgesteld: de models opbouwen en data presenteren bij de Verenigingen pagina. Daarnaast wil ik zelf ook zo snel mogelijk starten met het opbouwen van de kieswijzer. 
+De anderen heb ik kunnen helpen met feedback op hun websites. 
+
 
