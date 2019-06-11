@@ -8,6 +8,7 @@
         <!-- Styles -->
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
         <link href="static/website/styles.css" rel="stylesheet">
+        <link href="static/website/hover-min.css" rel="stylesheet">
 
         <!-- Scripts -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -28,23 +29,26 @@
     </header>
 
     <body>
+
         <nav class="navbar navbar-expand-md sticky-top navbar-light" id="nav">
 			<button aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-target="#navbar" data-toggle="collapse" type="button">
 				<span class="navbar-toggler-icon"></span>
 			</button>
             <div class="collapse navbar-collapse" id="navbar">
                 <ul class="navbar-nav mr-auto mt-2 mb-0 h5">
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="kieswijzer">Kieswijzer</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="verenigingen">Verenigingen</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'kieswijzer' %}">Kieswijzer</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'verenigingen' %}">Verenigingen</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'vereniging' %}">Vereniging</a></li>
+
                 </ul>
                 <ul class="navbar-nav ml-auto mt-2 mb-0 h5">
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
         </nav>
 
-        <main class="container p-5">
+        <main class="container-fluid">
             {% block main %}{% endblock %}
         </main>
 

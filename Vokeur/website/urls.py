@@ -6,8 +6,8 @@ from . import views
 
 urlpatterns = [
   path("", views.index, name="index"),
-  path("kieswijzer", views.kieswijzer, name="kieswijzer"),
-  path("verenigingen", views.verenigingen, name="verenigingen"),
-  path("contact", views.contact, name="contact"),
-]
-static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+  path("kieswijzer/", views.kieswijzer, name="kieswijzer"),
+  path("verenigingen/", views.verenigingen, name="verenigingen"),
+  path("contact/", views.contact, name="contact"),
+  path("vereniging/", views.vereniging, name="vereniging"),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

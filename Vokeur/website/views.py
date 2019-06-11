@@ -18,15 +18,23 @@ def index(request):
 
 def kieswijzer(request):
     context = {
-        "Vragens": Vragen.objects.all(),
+        "vragens": Vragen.objects.all(),
     }
     return render(request, "kieswijzer.html", context)
 
 def verenigingen(request):
     context = {
-    "Verenigingen": Verenigingen.objects.all(),
+    "verenigingen": Verenigingen.objects.all(),
+    "stad": Stad.objects.all(),
     }
     return render(request, "verenigingen.html", context)
+
+def vereniging(request):
+    context = {
+    "stad": Stad.objects.all(),
+    "verenigingen": Verenigingen.objects.all(),
+    }
+    return render(request, "vereniging.html", context)
 
 def contact(request):
     return render(request, "contact.html")

@@ -1,0 +1,38 @@
+{% csrf_token %}
+<br><br>
+<div class="row">
+    <div class="col" id="Steden">
+        <table class="table table-hover table-light table-sm text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Stad</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for s in stad %}
+                <tr>
+                    <td>{{ s.name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col" id="Verenigingen">
+        {% csrf_token %}
+        <table class="table table-hover table-light table-sm text-center">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Verenigingen</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for bier in verenigingen %}
+                <tr>
+                    <td>{{ bier.name }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

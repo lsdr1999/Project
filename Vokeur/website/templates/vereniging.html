@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    Verenigingen
+{% endblock %}
+
+{% block main %}
+
+<div class="container">
+    {% csrf_token %}
+    {% for bier in verenigingen %}
+    <br><br>
+    <div class="row">
+        <div class="col">
+            <h1> {{ bier.name }} </h1>
+            <br><br>
+        </div>
+        <div class="col">
+            <table class="table table-hover table-light table-sm text-center">
+
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Opgericht in</th>
+                        <th scope="col">Aantal leden</th>
+                        <th scope="col">Jaarlijkse contributie</th>
+                        <th scope="col">Borreldagen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> {{ bier.jaar }} </td>
+                        <td> ±{{ bier.leden }} </td>
+                        <td> €{{ bier.contributie }} </td>
+                        <td> {{ bier.borrel }} </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-6"> {{ bier.verhaal }} </div>
+        <div class="col-sm-6">
+            <img src= "{{ bier.afbeelding.url }}"> </div>
+    </div>
+    <br><br>
+    <div class="row">
+        <div class="col-sm-4"> {{ bier.adres }} </div>
+        <div class="col-sm-4"> <a href= "{{ bier.mail }}"> {{ bier.mail }} </a> </div>
+        <div class="col-sm-4"> <a href= "{{ bier.website }}"> {{ bier.website }} </a> </div>
+    </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}
