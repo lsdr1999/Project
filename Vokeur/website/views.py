@@ -29,7 +29,7 @@ def verenigingen(request):
     }
     return render(request, "verenigingen.html", context)
 
-def vereniging(request):
+def vereniging(request, name):
     context = {
     "stad": Stad.objects.all(),
     "verenigingen": Verenigingen.objects.all(),

@@ -28,17 +28,10 @@ class Antwoorden(models.Model):
     def is_upperclass(self):
         return self.antwoorden in (self.EENS, self.ONEENS, self.GEENVANBEIDE)
 
-class Stad(models.Model):
-    name = models.CharField(max_length=50)
-
-    def __str__(self):
-        return f"{self.name}"
-
 class Verenigingen(models.Model):
-    id = models.DecimalField(max_digits=4, decimal_places=0, primary_key=True)
+    id = models.AutoField(primary_key=True)
     afbeelding = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=64, null=True, blank=True)
-    stad = models.CharField(max_length=64, null=True, blank=True)
     adres = models.CharField(max_length=64, null=True, blank=True)
     leden = models.DecimalField(max_digits=5, decimal_places=0, null=True, blank=True)
     jaar = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True)
@@ -49,4 +42,11 @@ class Verenigingen(models.Model):
     verhaal = models.CharField(max_length=600, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.id} - {self.afbeelding} - {self.name} - {self.stad} - {self.adres} - {self.leden} - {self.jaar} - {self.contributie} - {self.borrel} - {self.mail} - {self.website} - {self.verhaal}"
+        return f"{self.name}"
+
+class Stad(models.Model):
+    name = models.CharField(max_length=50)
+    vovo = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='Verenigingen', null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
