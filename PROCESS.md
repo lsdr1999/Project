@@ -10,6 +10,24 @@ In verband met Pinksteren is deze meeting verschoven naar een later tijdstip dez
 
 ## Day 2
 
+Deze week werken we naar een Alpha versie van het project. Mijn doelen voor deze week zijn als volgt:
+
+- Verenigingen structureren en volledig werkende html bouwen, waarin doorverwezen wordt naar een gegenereede html per vereniging
+- Begin maken met de kieswijzer mocht er tijd over zijn deze week
+
+Omdat ik hier maandag al wel aan was begonnen kon ik al enkele functionaliteiten laten zien, in overleg is later besloten om voor "Bootstrap Cards" te kiezen. Dit is besloten omdat dit een mooie weergave van de verenigingen zou zijn.
+
+## Day 3
+
+Vandaag hebben we uitgebreid een style guide opgesteld, omdat de genoemde programma's niet voor ons van toepassing zijn hebben we gebruik gemaakt van de volgende [link](https://www.python.org/dev/peps/pep-0008/).
+
+Aan de hand hiervan zijn keuzes gemaakt die te vinden zijn in de stylesheet (STYLE.md).
+
+## Day 4
+
+De style guide is toegevoegd aan de map. 
+
+Daarnaast is er gekozen om enkele aanpassingen te doen in de opmaak van de vereniging pagina. Het wordt zometeen hopelijk mogelijk om via de Google Maps API het adres weer te geven. Daarnaast wordt het mogelijk om via de website een mail te sturen naar de betreffende vereniging.
 <br>
 <br>
 <br>
