@@ -30,13 +30,14 @@ class Antwoorden(models.Model):
 
 class Verenigingen(models.Model):
     id = models.AutoField(primary_key=True)
-    afbeelding = models.ImageField(null=True, blank=True)
     name = models.CharField(max_length=64, null=True, blank=True)
+    afbeelding = models.ImageField(null=True, blank=True)
     adres = models.CharField(max_length=64, null=True, blank=True)
     leden = models.DecimalField(max_digits=5, decimal_places=0, null=True, blank=True)
     jaar = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True)
     contributie = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     borrel = models.CharField(max_length=64, null=True, blank=True)
+    ontgroening = models.CharField(max_length=64, null=True, blank=True)
     mail = models.EmailField(max_length=64, null=True, blank=True)
     website = models.URLField(max_length=64, null=True, blank=True)
     verhaal = models.CharField(max_length=600, null=True, blank=True)
