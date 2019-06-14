@@ -28,6 +28,14 @@ class Antwoorden(models.Model):
     def is_upperclass(self):
         return self.antwoorden in (self.EENS, self.ONEENS, self.GEENVANBEIDE)
 
+class Stad(models.Model):
+    name = models.CharField(max_length=50)
+    # ver = models.ManyToManyField(Verenigingen)
+    # vivi = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='Verenigingen', null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
+
 class Verenigingen(models.Model):
     id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=64, null=True, blank=True)
@@ -41,13 +49,7 @@ class Verenigingen(models.Model):
     mail = models.EmailField(max_length=64, null=True, blank=True)
     website = models.URLField(max_length=64, null=True, blank=True)
     verhaal = models.CharField(max_length=600, null=True, blank=True)
-
-    def __str__(self):
-        return f"{self.name}"
-
-class Stad(models.Model):
-    name = models.CharField(max_length=50)
-    vovo = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='Verenigingen', null=True, blank=True)
+    stad = models.ForeignKey(Stad, on_delete=models.CASCADE)
 
     def __str__(self):
         return f"{self.name}"

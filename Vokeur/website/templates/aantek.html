@@ -1,3 +1,100 @@
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#selection").change(function() {
+            location = $("#selection option:selected").val();
+        });
+    });
+</script>
+
+<p align="center">
+    <form name="jump" class="center">
+        <select name="menu" id="selection">
+            <option value="#">Select an option</option>
+            <option value="/link1.shtml">Link 1</option>
+            <option value="/link2.shtml">Link 2</option>
+            <option value="/link3.shtml">Link 3</option>
+        </select>
+    </form>
+</p>
+
+
+
+<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" href="#">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Send an email</h4>
+            </div>
+            <div class="modal-body">
+                <div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text" id="basic-addon1">@</span>
+</div>
+<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+
+<div class="input-group mb-3">
+<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+<div class="input-group-append">
+<span class="input-group-text" id="basic-addon2">@example.com</span>
+</div>
+</div>
+
+<label for="basic-url">Your vanity URL</label>
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
+</div>
+<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+<span class="input-group-text">$</span>
+</div>
+<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
+<div class="input-group-append">
+<span class="input-group-text">.00</span>
+</div>
+</div>
+
+<div class="input-group">
+<div class="input-group-prepend">
+<span class="input-group-text">With textarea</span>
+</div>
+<textarea class="form-control" aria-label="With textarea"></textarea>
+</div>
+                <form action="mailto:{{ bier.mail }}" method="post" enctype="text/plain">
+                    Name:<br>
+                    <input type="text" name="name"><br>
+                    E-mail:<br>
+                    <input type="text" name="mail"><br>
+                    Comment:<br>
+                    <input type="text" name="comment" size="150"><br><br>
+                    <input type="submit" value="Send">
+                    <input type="reset" value="Reset">
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endfor %}
+</div>
+
+
+<script type="text/javascript"> function showMyModalSetTitle() {
+    $('#myModal').modal('show');
+}
+</script>
+
+
+
+
+
+
+
+
+
 {% csrf_token %}
 <br><br>
 <div class="row">

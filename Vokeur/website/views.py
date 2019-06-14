@@ -14,27 +14,34 @@ if superuser.count() == 0:
     superuser.save()
 
 def index(request):
-    return render(request, "index.html")
+    context = {
+        "stad": Stad.objects.all(),
+    }
+    return render(request, "index.html", context)
 
 def kieswijzer(request):
     context = {
         "vragens": Vragen.objects.all(),
+        "stad": Stad.objects.all(),
     }
     return render(request, "kieswijzer.html", context)
 
-def verenigingen(request):
+def verenigingen(request, name):
     context = {
-    "verenigingen": Verenigingen.objects.all(),
-    "stad": Stad.objects.all(),
+        "verenigingen": Verenigingen.objects.all(),
+        "stad": Stad.objects.all(),
     }
     return render(request, "verenigingen.html", context)
 
 def vereniging(request, name):
     context = {
-    "stad": Stad.objects.all(),
-    "verenigingen": Verenigingen.objects.all(),
+        "verenigingen": Verenigingen.objects.all(),
+        "stad": Stad.objects.all(),
     }
     return render(request, "vereniging.html", context)
 
 def contact(request):
-    return render(request, "contact.html")
+    context = {
+        "stad": Stad.objects.all(),
+    }
+    return render(request, "contact.html", context)

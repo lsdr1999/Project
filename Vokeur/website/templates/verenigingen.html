@@ -8,46 +8,11 @@
 
 {% block main %}
 
-
-
-    <div class="btn-group dropright">
-        <button type="button" class="btn btn-secondary">
-            Steden
-        </button>
-        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <span class="sr-only">Lijstje</span>
-        </button>
-        <div class="dropdown-menu">
-            {% for s in stad %}
-            <a class="dropdown-item" href="#">{{ s.name }}</a>
-            {% endfor %}
-        </div>
-    </div>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-            $("#selection").change(function() {
-                location = $("#selection option:selected").val();
-            });
-        });
-    </script>
-
-    <p align="center">
-        <form name="jump" class="center">
-            <select name="menu" id="selection">
-                <option value="#">Select an option</option>
-                <option value="/link1.shtml">Link 1</option>
-                <option value="/link2.shtml">Link 2</option>
-                <option value="/link3.shtml">Link 3</option>
-            </select>
-        </form>
-    </p>
-
-    {% for bier in verenigingen %}
     <div class="container">
         {% csrf_token %}
         <br><br>
         <div class="row">
+            {% for bier in verenigingen %}
             <div class="col">
                 <div class="card" style="width: 18rem; text-align:center;">
                     <img src="{{ bier.afbeelding.url }}" class="card-img-top" alt="...">
@@ -63,9 +28,10 @@
                         <a href="{% url 'vereniging' bier.name %}" class="card-link">Meer informatie</a>
                     </div>
                 </div>
+                <br><br>
             </div>
+            {% endfor %}
         </div>
     </div>
-    {% endfor %}
 
 {% endblock %}

@@ -39,7 +39,14 @@
                 <ul class="navbar-nav mr-auto mt-2 mb-0 h5">
                     <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'kieswijzer' %}">Kieswijzer</a></li>
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'verenigingen' %}">Verenigingen</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="nav-color" role="button">Verenigingen</a>
+                        <div class="dropdown-menu">
+                            {% for s in stad %}
+                            <a class="dropdown-item" href="{% url 'verenigingen' s.name %}">{{ s.name }}</a>
+                            {% endfor %}
+                        </div>
+                    </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mt-2 mb-0 h5">
                     <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'contact' %}">Contact</a></li>

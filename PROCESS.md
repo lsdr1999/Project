@@ -28,6 +28,25 @@ Aan de hand hiervan zijn keuzes gemaakt die te vinden zijn in de stylesheet (STY
 De style guide is toegevoegd aan de map. 
 
 Daarnaast is er gekozen om enkele aanpassingen te doen in de opmaak van de vereniging pagina. Het wordt zometeen hopelijk mogelijk om via de Google Maps API het adres weer te geven. Daarnaast wordt het mogelijk om via de website een mail te sturen naar de betreffende vereniging.
+
+## Day 5
+
+Vandaag was er weer een bijeenkomst waarin we uitgebreider, samen met de tutor, elkaars websites konden feedbacken. Na een korte meeting waarin onderstaande functies door mij werden gepresenteerd ben ik verder gegaan met het verzamelen van meer data. 
+Er is nu een tweede vereniging toegevoegd. 
+
+Er zijn nog wel problemen met het opbouwen van de models, vooral wanneer er doorverwezen moet worden naar andere pagina's. Hopelijk kan dat maandag opgelost worden... 
+
+Komend weekend ga ik mij focussen op de kieswijzer en de API van Google Maps.
+
+##### Scherm 1: Startscherm wanneer Leiden is gekozen
+![](doc/vo1.png)
+
+##### Scherm 2: Scherm waarin meer informatie over Minerva wordt opgevraagd
+![](doc/vo2.png)
+
+##### Scherm 3: De mogelijkheid om een mail te versturen naar de betreffende vereniging
+![](doc/vo3.png)
+
 <br>
 <br>
 <br>
