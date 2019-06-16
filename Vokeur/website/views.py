@@ -21,7 +21,8 @@ def index(request):
 
 def kieswijzer(request):
     context = {
-        "vragens": Vragen.objects.all(),
+        "vragen": Vragen.objects.all(),
+        "antwoorden": Antwoorden.objects.all(),
         "stad": Stad.objects.all(),
     }
     return render(request, "kieswijzer.html", context)

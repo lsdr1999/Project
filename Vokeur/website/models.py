@@ -5,28 +5,20 @@ from django.conf import settings
 
 class Vragen(models.Model):
     id = models.DecimalField(max_digits=4, decimal_places=0, primary_key=True)
-    name = models.CharField(max_length=240)
+    name = models.CharField(max_length=64)
 
     def __str__(self):
-        return f"{self.id} - {self.name}"
+        return f"{self.id}. {self.name}"
 
 class Antwoorden(models.Model):
-    EENS = 'Eens'
-    ONEENS = 'Oneens'
-    GEENVANBEIDE = 'Geen van beide'
-    ANTWOORDEN = [
-        (EENS, 'Eens'),
-        (ONEENS, 'Oneens'),
-        (GEENVANBEIDE, 'Geen van beide'),
-    ]
-    antwoorden = models.CharField(
-        max_length=15,
-        choices=ANTWOORDEN,
-        default=None,
-    )
+    id = models.ForeignKey(Vragen, on_delete=models.CASCADE, primary_key=True)
+    vraag = models.CharField(max_length=240)
+    eens = models.CharField(max_length=4, default="Eens")
+    oneens = models.CharField(max_length=6, default="Oneens")
+    geenvanbeide = models.CharField(max_length=14, default="Geen van Beide")
 
-    def is_upperclass(self):
-        return self.antwoorden in (self.EENS, self.ONEENS, self.GEENVANBEIDE)
+    def __str__(self):
+        return f"{self.id}"
 
 class Stad(models.Model):
     name = models.CharField(max_length=50)
