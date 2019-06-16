@@ -43,3 +43,4 @@ Voor mijn styling heb ik, samen met de andere web_app studenten, gebruik gemaakt
 - Patterns to be avoided.
 	- Copying code
 	- Repeating
+
