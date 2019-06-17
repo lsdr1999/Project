@@ -3,18 +3,17 @@
 {% load static %}
 
 {% block title %}
-    Verenigingen
+    {{ vereniging.name }}
 {% endblock %}
 
 {% block main %}
 
 <div class="container">
     {% csrf_token %}
-    {% for bier in verenigingen %}
     <br><br>
     <div class="row">
         <div class="col">
-            <h1> {{ bier.name }} </h1>
+            <h1> {{ vereniging.name }} </h1>
             <br><br>
         </div>
         <div class="col">
@@ -26,14 +25,16 @@
                         <th scope="col">Aantal leden</th>
                         <th scope="col">Jaarlijkse contributie</th>
                         <th scope="col">Borreldagen</th>
+                        <th scope="col">Ontgroening</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td> {{ bier.jaar }} </td>
-                        <td> ±{{ bier.leden }} </td>
-                        <td> €{{ bier.contributie }} </td>
-                        <td> {{ bier.borrel }} </td>
+                        <td> {{ vereniging.jaar }} </td>
+                        <td> ±{{ vereniging.leden }} </td>
+                        <td> €{{ vereniging.contributie }} </td>
+                        <td> {{ vereniging.borrel }} </td>
+                        <td> {{ vereniging.ontgroening }} </td>
                     </tr>
                 </tbody>
             </table>
@@ -41,19 +42,19 @@
     </div>
     <br><br>
     <div class="row">
-        <div class="col-sm-6"> {{ bier.verhaal }} </div>
+        <div class="col-sm-6"> {{ vereniging.verhaal }} </div>
         <div class="col-sm-6">
-            <img src= "{{ bier.afbeelding.url }}"> </div>
+            <img src= "{{ vereniging.afbeelding.url }}"> </div>
     </div>
     <br><br>
     <div class="row">
-        <div class="col-sm-4"> {{ bier.adres }} </div>
-        <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#myModal" href= "{{ bier.mail }}"> {{ bier.mail }} </button> </div>
-        <div class="col-sm-4"> <button type="button" class="btn btn-warning"> <a href= "{{ bier.website }}"> Website: {{ bier.name }} </a> </button> </div>
+        <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#kaart" href= "{{ vereniging.adres }}"> Adres: Kaart </button> </div>
+        <div class="col-sm-4"> <button type="button" class="btn btn-warning"> <a href= "{{ vereniging.website }}"> Website: {{ vereniging.name }} </a> </button> </div>
+        <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mailen" href= "{{ vereniging.mail }}"> Mail: {{ vereniging.mail }} </button> </div>
     </div>
 
     <!--Modal Window-->
-    <div class="modal fade left" id="myModal">
+    <div class="modal fade left" id="mailen">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -61,7 +62,7 @@
                     <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal" role="form" method="post" action="mailto:{{ bier.mail }} ">
+                    <form class="form-horizontal" role="form" method="post" action="mailto:{{ vereniging.mail }} ">
                         <div class="form-group">
                             <label for="name" class="col-sm-3 control-label">Naam:</label>
                             <div class="col-sm-9">
@@ -99,6 +100,52 @@
             </div>
         </div>
     </div>
-    {% endfor %}
+
+    <!--Modal Window 2-->
+    <div class="modal fade left" id="kaart">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="pull-left no-margin">Adres</h3>
+                    <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <head>
+                    <style>
+                      /* Always set the map height explicitly to define the size of the div
+                       * element that contains the map. */
+                      #map {
+                        height: 400px;
+                        width: 400px;
+                      }
+                      /* Optional: Makes the sample page fill the window. */
+                      html, body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                      }
+                    </style>
+                    <h6> {{ vereniging.adres }} </h6>
+                    </head>
+                    <body>
+                    <div id="map"></div>
+                    <script>
+                        // Initialize and add the map
+                        function initMap() {
+                            // The location of location
+                            var location = {lat: 52.159798, lng: 4.487944};
+                            // The map, centered at location
+                            var map = new google.maps.Map(
+                                document.getElementById('map'), {zoom: 18, center: location});
+                            // The marker, positioned at location
+                            var marker = new google.maps.Marker({position: location, map: map});
+                        }
+                    </script>
+
+                      </body>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}

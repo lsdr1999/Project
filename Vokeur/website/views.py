@@ -28,14 +28,18 @@ def kieswijzer(request):
     return render(request, "kieswijzer.html", context)
 
 def verenigingen(request, name):
+    stad = Stad.objects.get(name=name)
+    verenigingen = stad.verenigingen.all()
     context = {
-        "verenigingen": Verenigingen.objects.all(),
+        "verenigingen": verenigingen,
         "stad": Stad.objects.all(),
     }
     return render(request, "verenigingen.html", context)
 
-def vereniging(request, name):
+def vereniging(request, url):
+    vereniging = Verenigingen.objects.get(url=url)
     context = {
+        "vereniging": vereniging,
         "verenigingen": Verenigingen.objects.all(),
         "stad": Stad.objects.all(),
     }

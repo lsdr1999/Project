@@ -30,6 +30,7 @@ class Stad(models.Model):
 
 class Verenigingen(models.Model):
     id = models.AutoField(primary_key=True)
+    url = models.CharField(max_length=64, null=True, blank=True)
     name = models.CharField(max_length=64, null=True, blank=True)
     afbeelding = models.ImageField(null=True, blank=True)
     adres = models.CharField(max_length=64, null=True, blank=True)
@@ -41,7 +42,7 @@ class Verenigingen(models.Model):
     mail = models.EmailField(max_length=64, null=True, blank=True)
     website = models.URLField(max_length=64, null=True, blank=True)
     verhaal = models.CharField(max_length=600, null=True, blank=True)
-    stad = models.ForeignKey(Stad, on_delete=models.CASCADE)
+    stad = models.ForeignKey(Stad, on_delete=models.CASCADE, related_name='verenigingen')
 
     def __str__(self):
         return f"{self.name}"

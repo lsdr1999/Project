@@ -1,135 +1,39 @@
-<script type="text/javascript">
-    $(document).ready(function() {
-        $("#selection").change(function() {
-            location = $("#selection option:selected").val();
-        });
-    });
-</script>
+<style>
+    .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;
+    }
+</style>
 
-<p align="center">
-    <form name="jump" class="center">
-        <select name="menu" id="selection">
-            <option value="#">Select an option</option>
-            <option value="/link1.shtml">Link 1</option>
-            <option value="/link2.shtml">Link 2</option>
-            <option value="/link3.shtml">Link 3</option>
-        </select>
-    </form>
-</p>
+Checkbox:
+<input id="mylink" type="checkbox" onclick="myFunction()" checked data-toggle="toggle" data-size="xs" data-onstyle="warning" data-style="slow" checked>
 
+<input id="mylink" type="checkbox" onclick="myFunction()" checked>
 
+<p id="text" style="display:none">Checkbox is CHECKED!</p>
 
-<div class="modal fade" id="myModal" role="dialog" data-keyboard="false" href="#">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h4 class="modal-title">Send an email</h4>
-            </div>
-            <div class="modal-body">
-                <div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text" id="basic-addon1">@</span>
-</div>
-<input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-</div>
-
-<div class="input-group mb-3">
-<input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
-<div class="input-group-append">
-<span class="input-group-text" id="basic-addon2">@example.com</span>
-</div>
-</div>
-
-<label for="basic-url">Your vanity URL</label>
-<div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text" id="basic-addon3">https://example.com/users/</span>
-</div>
-<input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
-</div>
-
-<div class="input-group mb-3">
-<div class="input-group-prepend">
-<span class="input-group-text">$</span>
-</div>
-<input type="text" class="form-control" aria-label="Amount (to the nearest dollar)">
-<div class="input-group-append">
-<span class="input-group-text">.00</span>
-</div>
-</div>
-
-<div class="input-group">
-<div class="input-group-prepend">
-<span class="input-group-text">With textarea</span>
-</div>
-<textarea class="form-control" aria-label="With textarea"></textarea>
-</div>
-                <form action="mailto:{{ bier.mail }}" method="post" enctype="text/plain">
-                    Name:<br>
-                    <input type="text" name="name"><br>
-                    E-mail:<br>
-                    <input type="text" name="mail"><br>
-                    Comment:<br>
-                    <input type="text" name="comment" size="150"><br><br>
-                    <input type="submit" value="Send">
-                    <input type="reset" value="Reset">
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-{% endfor %}
-</div>
-
-
-<script type="text/javascript"> function showMyModalSetTitle() {
-    $('#myModal').modal('show');
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("mylink");
+  var script = document.createElement("script");
+  if (checkBox.checked == true){
+      script.type = "text/javascript";
+      script.src = "/static/website/script.js";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      return false;
+  } else {
+      script.type = "text/javascript";
+      script.src = "";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      return false;
+  }
 }
 </script>
 
 
-
-
-
-
-
-
-
-{% csrf_token %}
-<br><br>
-<div class="row">
-    <div class="col" id="Steden">
-        <table class="table table-hover table-light table-sm text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Stad</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for s in stad %}
-                <tr>
-                    <td>{{ s.name }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-
-    <div class="col" id="Verenigingen">
-        {% csrf_token %}
-        <table class="table table-hover table-light table-sm text-center">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Verenigingen</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for bier in verenigingen %}
-                <tr>
-                    <td>{{ bier.name }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
-    </div>
-</div>
+Google API
+var map;
+function initMap() {
+    map = new google.maps.Map(document.getElementById('map'), {
+        center: {lat: -34.397, lng: 150.644},
+        zoom: 8
+    });
+};
