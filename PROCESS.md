@@ -2,6 +2,30 @@
 
 Lars de Roos | Web Apps Project
 
+# Week 3
+
+## Day 1
+
+Vandaag de verenigingen pagina's afgemaakt. Google API toegevoegd en Kieswijzer uitgedacht. Dat wordt nog niet heel makkelijk helaas. 
+![](doc/jun1.png)
+![](doc/jun2.png)
+
+To do's voor komende week:
+
+- Kieswijzer (vragen opeenvolgend, soort quiz).
+- Kieswijzer (data opslaan en vergelijking met partijen uitvoeren -> tot 'beste' partij komen.
+- Google API (data inladen per vereniging, misschien via GeoCoding anders zelf set opbouwen).
+
+Optioneel:
+
+- Email naar vereniging stylen (html/css)
+- Slider voor JavaScript met Bierdouche
+
+<br>
+<br>
+<br>
+<br>
+
 # Week 2
 
 ## Day 1
