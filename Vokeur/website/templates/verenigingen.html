@@ -10,30 +10,34 @@
 
     <h1 class="text-center"> Verenigingen van {{ test.name }} </h1>
 
-    <div class="container">
-        {% csrf_token %}
-        <br><br>
-        <div class="row">
-            {% for bier in verenigingen %}
-            <div class="col">
-                <div class="card" style="width: 18rem; text-align:center;">
-                    <img src="{{ bier.afbeelding.url }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title"> {{ bier.name }} </h5>
-                    </div>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item small">Opgericht in {{ bier.jaar }} </li>
-                        <li class="list-group-item small">Aantal leden: ±{{ bier.leden }} </li>
-                        <li class="list-group-item small">Ontgroening: {{ bier.ontgroening }} </li>
-                    </ul>
-                    <div class="card-body">
-                        <a href="{% url 'vereniging' bier.url %}" class="card-link">Meer informatie</a>
-                    </div>
+    {% csrf_token %}
+    <br><br>
+    <div class="row">
+        {% for bier in verenigingen %}
+        {% for bier in verenigingen %}
+        {% for bier in verenigingen %}
+        {% for bier in verenigingen %}
+        <div class="col">
+            <div class="card" style="width: 18rem; text-align:center;">
+                <img src="{{ bier.afbeelding.url }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"> {{ bier.name }} </h5>
                 </div>
-                <br><br>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item small">Opgericht in {{ bier.jaar }} </li>
+                    <li class="list-group-item small">Aantal leden: ±{{ bier.leden }} </li>
+                    <li class="list-group-item small">Ontgroening: {{ bier.ontgroening }} </li>
+                </ul>
+                <div class="card-body">
+                    <a href="{% url 'vereniging' bier.url %}" class="card-link">Meer informatie</a>
+                </div>
             </div>
-            {% endfor %}
+            <br><br>
         </div>
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
+        {% endfor %}
     </div>
 
 {% endblock %}
