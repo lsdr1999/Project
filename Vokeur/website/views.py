@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.db.models import Sum
-from .models import Vragen, Antwoorden, Stad, Verenigingen
+from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden
 
 superuser = User.objects.filter(is_superuser = True)
 if superuser.count() == 0:
@@ -32,6 +32,7 @@ def verenigingen(request, name):
     verenigingen = stad.verenigingen.all()
     context = {
         "verenigingen": verenigingen,
+        "test": stad,
         "stad": Stad.objects.all(),
     }
     return render(request, "verenigingen.html", context)
@@ -44,6 +45,13 @@ def vereniging(request, url):
         "stad": Stad.objects.all(),
     }
     return render(request, "vereniging.html", context)
+
+def woorden(request):
+    context = {
+        "woorden": Woorden.objects.all(),
+        "stad": Stad.objects.all(),
+    }
+    return render(request, "woorden.html", context)
 
 def contact(request):
     context = {

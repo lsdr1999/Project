@@ -1,0 +1,28 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    Woordenboek
+{% endblock %}
+
+{% block main %}
+
+    <h1 class="text-center"> Woordenboek </h1>
+    <div class="container">
+        {% csrf_token %}
+        <br><br>
+        {% for woord in woorden %}
+        <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="mr-auto">{{ woord.woord }}</strong>
+            </div>
+            <div class="toast-body">
+                {{ woord.betekenis }}
+            </div>
+        </div>
+        <br>
+        {% endfor %}
+    </div>
+
+{% endblock %}

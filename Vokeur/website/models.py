@@ -22,8 +22,6 @@ class Antwoorden(models.Model):
 
 class Stad(models.Model):
     name = models.CharField(max_length=50)
-    # ver = models.ManyToManyField(Verenigingen)
-    # vivi = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='Verenigingen', null=True, blank=True)
 
     def __str__(self):
         return f"{self.name}"
@@ -46,3 +44,17 @@ class Verenigingen(models.Model):
 
     def __str__(self):
         return f"{self.name}"
+
+class Letter(models.Model):
+    name = models.CharField(max_length=2)
+
+    def __str__(self):
+        return f"{self.name}"
+
+class Woorden(models.Model):
+    letter = models.ForeignKey(Letter, on_delete=models.CASCADE, related_name='woorden')
+    woord = models.CharField(max_length=64, null=True, blank=True)
+    betekenis = models.CharField(max_length=600, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.woord}"
