@@ -15,11 +15,30 @@ To do's voor komende week:
 - Kieswijzer (vragen opeenvolgend, soort quiz).
 - Kieswijzer (data opslaan en vergelijking met partijen uitvoeren -> tot 'beste' partij komen.
 - Google API (data inladen per vereniging, misschien via GeoCoding anders zelf set opbouwen).
+- Woordenlijst navigeerbaar maken a.d.h.v. letters (modal is al gereed)
 
 Optioneel:
 
 - Email naar vereniging stylen (html/css)
 - Slider voor JavaScript met Bierdouche
+- Over/Algemeen (uitleg) teksten typen
+
+
+## Day 2
+
+Na al snel ondervonden te hebben dat het maken van een dergelijke quiz niet heel gemakkelijk is heb ik ervoor gekozen om eerst alle andere functionaliteiten af te maken. Om die reden zijn nu de homepage, woordenboek en contact pagina's gemaakt en afgerond. Voor de woordenboek pagina zijn nieuwe modals gebouwd en is een grote hoeveelheid data (handmatig) toegevoegd.
+
+De homepage
+![](doc/jun3.png)
+
+De woordenboek pagina
+![](doc/jun4.png)
+
+De contact pagina
+![](doc/jun5.png)
+
+
+## Day 3
 
 <br>
 <br>
