@@ -57,4 +57,4 @@ class Woorden(models.Model):
     betekenis = models.CharField(max_length=600, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.woord}"
+        return f"{self.letter} - {self.woord}"
