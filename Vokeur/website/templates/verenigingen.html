@@ -12,14 +12,11 @@
 
     {% csrf_token %}
     <br><br>
-    <div class="row">
+    <div class="row justify-content-center">
         {% for bier in verenigingen %}
-        {% for bier in verenigingen %}
-        {% for bier in verenigingen %}
-        {% for bier in verenigingen %}
-        <div class="col">
-            <div class="card" style="width: 18rem; text-align:center;">
-                <img src="{{ bier.afbeelding.url }}" class="card-img-top" alt="...">
+        <div class="col-lg-3 col-md-4 col-7">
+            <div class="card text-center border-warning mb-3">
+                <img src="{{ bier.afbeelding.url }}" class="card-img-top" alt="{{ bier.name }}">
                 <div class="card-body">
                     <h5 class="card-title"> {{ bier.name }} </h5>
                 </div>
@@ -34,9 +31,6 @@
             </div>
             <br><br>
         </div>
-        {% endfor %}
-        {% endfor %}
-        {% endfor %}
         {% endfor %}
     </div>
 

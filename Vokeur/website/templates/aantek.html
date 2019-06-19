@@ -1,3 +1,5 @@
+
+Functie voor bierdouche
 <style>
     .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;
     }
@@ -37,3 +39,50 @@ function initMap() {
         zoom: 8
     });
 };
+
+Oude kieswijzer
+<h1 class="text-center"> Kieswijzer </h1>
+
+<div class="container">
+    {% csrf_token %}
+    <br><br>
+
+    {% for vraag in antwoorden %}
+    <div class="card text-center" class="">
+        <div class="card-header"> <h4> {{ vraag.id }} </h4> </div>
+        <div class="card-body">
+            <h5 class="card-title"> {{ vraag.vraag }} </h5>
+            <a href="#" class="btn btn-warning"> {{ vraag.eens }} </a>
+            <a href="#" class="btn btn-warning"> {{ vraag.geenvanbeide }} </a>
+            <a href="#" class="btn btn-warning"> {{ vraag.oneens }} </a>
+        </div>
+        <div class="card-footer text-muted">
+            <p class="card-text">Selecteer één van de bovenstaande opties.</p>
+        </div>
+    </div>
+    <br><br>
+    {% endfor %}
+</div>
+
+Navigatie met letters
+<div class="col-1 text-center">
+    <ul class="list-group">
+        {% for l in letters %}
+            <button class="btn btn-light" href="#"> {{ l.name }} </button>
+        {% endfor %}
+    </ul>
+</div>
+<div class="col">
+
+Wat vinden de verenigingen?
+    <div style="overflow:auto;">
+        <div style="float:right;">
+            <button type="button" class="btn btn-warning">Wat vinden de verenigingen?</button>
+            {% for vraag in verant %}
+                <ul>
+                    <li> {{ vraag.vereniging }} </li>
+                    <li> {{ vraag.antwoord }} </li>
+                </ul>
+            {% endfor %}
+        </div>
+    </div>

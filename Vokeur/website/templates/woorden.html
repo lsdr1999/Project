@@ -13,20 +13,18 @@
         {% csrf_token %}
         <br><br>
         {% for woord in woorden %}
-        <div class="row">
-            <div class="col-3"> </div>
-            <div class="col-6">
-                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-7">
+                <div class="card">
+                    <div class="card-header">
                         <strong class="mr-auto">{{ woord.woord }}</strong>
                     </div>
-                    <div class="toast-body">
+                    <div class="card-body">
                         {{ woord.betekenis }}
                     </div>
                 </div>
                 <br>
             </div>
-            <div class="col-5"> </div>
         </div>
         {% endfor %}
     </div>

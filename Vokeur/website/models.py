@@ -39,11 +39,21 @@ class Verenigingen(models.Model):
     ontgroening = models.CharField(max_length=64, null=True, blank=True)
     mail = models.EmailField(max_length=64, null=True, blank=True)
     website = models.URLField(max_length=64, null=True, blank=True)
+    lat = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
+    lng = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     verhaal = models.CharField(max_length=600, null=True, blank=True)
     stad = models.ForeignKey(Stad, on_delete=models.CASCADE, related_name='verenigingen')
 
     def __str__(self):
         return f"{self.name}"
+
+class Verant(models.Model):
+    vereniging = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='verant')
+    vraag = models.ForeignKey(Vragen, on_delete=models.CASCADE, related_name='verant')
+    antwoord = models.CharField(max_length=14, null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.vereniging} - {self.vraag} = {self.antwoord}"
 
 class Letter(models.Model):
     name = models.CharField(max_length=2)

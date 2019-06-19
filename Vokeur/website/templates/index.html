@@ -8,6 +8,44 @@
 
 {% block main %}
 
+<style>
+    .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;
+    }
+</style>
+
+<head>
+<input id="mylink" type="checkbox" onclick="myFunction()">
+</head>
+
+<script type="text/javascript">
+    var myLink = document.getElementById('mylink');
+
+    myLink.onclick = function(){
+
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = "/static/website/script.js";
+        document.getElementsByTagName("head")[0].appendChild(script);
+        return false;
+    }
+</script>
+
+<script>
+function myFunction() {
+  var checkBox = document.getElementById("mylink");
+  var script = document.createElement("script");
+  if (checkBox.checked == true){
+      script.type = "text/javascript";
+      script.src = "/static/website/script.js";
+      script.id = "script1";
+      document.getElementsByTagName("head")[0].appendChild(script);
+      return false;
+  } else {
+      $('script1').att('/static/website/script.js').remove();
+  }
+}
+</script>
+
     <br>
     <blockquote class="blockquote text-center">
         <div class="p-3 mb-2 text-dark" id="nav-color">
@@ -15,7 +53,7 @@
             <p class="text-muted"> Ontdek welke vereniging jouw voorkeur heeft. </p>
         </div>
     </blockquote>
-    
+
     <div id="select" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner center">
             <div class="carousel-item">

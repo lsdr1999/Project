@@ -16,7 +16,7 @@
                 <h1> {{ vereniging.name }} </h1>
                 <br><br>
             </div>
-            <div class="col">
+            <div class="col-xs-6">
                 <table class="table table-hover table-light table-sm text-center">
 
                     <thead class="thead-dark">
@@ -24,7 +24,6 @@
                             <th scope="col">Opgericht in</th>
                             <th scope="col">Aantal leden</th>
                             <th scope="col">Jaarlijkse contributie</th>
-                            <th scope="col">Borreldagen</th>
                             <th scope="col">Ontgroening</th>
                         </tr>
                     </thead>
@@ -33,7 +32,6 @@
                             <td> {{ vereniging.jaar }} </td>
                             <td> ±{{ vereniging.leden }} </td>
                             <td> €{{ vereniging.contributie }} </td>
-                            <td> {{ vereniging.borrel }} </td>
                             <td> {{ vereniging.ontgroening }} </td>
                         </tr>
                     </tbody>
@@ -41,111 +39,116 @@
             </div>
         </div>
         <br><br>
-        <div class="row">
-            <div class="col-sm-6"> {{ vereniging.verhaal }} </div>
-            <div class="col-sm-6">
-                <img src= "{{ vereniging.afbeelding.url }}"> </div>
+        <div class="row justify-content-center">
+            <div class="col"> {{ vereniging.verhaal }} </div>
+            <div class="col">
+                <img src= "{{ vereniging.afbeelding.url }}" width="300" height="300"> </div>
         </div>
         <br><br>
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#kaart" href= "{{ vereniging.adres }}"> Adres: Kaart </button> </div>
             <div class="col-sm-4"> <button type="button" class="btn btn-warning"> <a href= "{{ vereniging.website }}"> Website: {{ vereniging.name }} </a> </button> </div>
             <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mailen" href= "{{ vereniging.mail }}"> Mail: {{ vereniging.mail }} </button> </div>
         </div>
+        <br>
 
-        <!--Modal Window-->
-        <div class="modal fade left" id="mailen">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="pull-left no-margin">Stuur een mail</h3>
-                        <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <form class="form-horizontal" role="form" method="post" action="mailto:{{ vereniging.mail }} ">
-                            <div class="form-group">
-                                <label for="name" class="col-sm-3 control-label">Naam:</label>
-                                <div class="col-sm-9">
-                                    <input type="text" class="form-control" id="name" name="name" required>
-                                </div>
+{% endblock %}
+
+{% block modal %}
+    <!--Modal Window-->
+    <div class="modal fade left" id="mailen" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="pull-left no-margin">Stuur een mail</h3>
+                    <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal" role="form" method="post" action="mailto:{{ vereniging.mail }} ">
+                        <div class="form-group">
+                            <label for="name" class="col-sm-3 control-label">Naam:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="name" name="name" required>
                             </div>
-                            <div class="form-group">
-                                <label for="email" class="col-sm-3 control-label">Email: </label>
-                                <div class="col-sm-9">
-                                    <input type="email" class="form-control" id="email" name="email" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="message" class="col-sm-3 control-label">Bericht:</label>
-                                <div class="col-sm-9">
-                                    <textarea name="message" rows="4" required class="form-control" id="message"></textarea>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
-                                    <button type="submit" id="submit" name="submit" class="btn btn-warning">Verstuur</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    <div class="modal-footer">
-                        <div class="col-xs-10 pull-left text-left text-muted">
-                            <small><strong>Privacy Policy:</strong>
-                                Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                                Mauris vitae libero lacus, vel hendrerit nisi! Maecenas quis
-                                velit nisl, volutpat viverra felis. Vestibulum luctus mauris
-                                sed sem dapibus luctus.</small>
                         </div>
+                        <div class="form-group">
+                            <label for="email" class="col-sm-3 control-label">Email: </label>
+                            <div class="col-sm-9">
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-sm-3 control-label">Bericht:</label>
+                            <div class="col-sm-9">
+                                <textarea name="message" rows="4" required class="form-control" id="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+                                <button type="submit" id="submit" name="submit" class="btn btn-warning">Verstuur</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-xs-10 pull-left text-left text-muted">
+                        <small><strong>Disclaimer:</strong>
+                            Wij zijn niet verantwoordelijk voor de mails die via dit formulier worden verzonden.
+                            Ga verstandig om met deze functie en verstuur geen schadelijke informatie over uwzelf,
+                            de vereniging, deze website of andere personen en/of organisaties. In sommige gevallen
+                            is het beter om helemaal geen mail te sturen.
+                        </small>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
-        <!--Modal Window 2-->
-        <div class="modal fade left" id="kaart">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h3 class="pull-left no-margin">Adres</h3>
-                        <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
-                    </div>
-                    <div class="modal-body">
-                        <head>
-                        <style>
-                          /* Always set the map height explicitly to define the size of the div
-                           * element that contains the map. */
-                          #map {
-                            height: 400px;
-                            width: 400px;
-                          }
-                          /* Optional: Makes the sample page fill the window. */
-                          html, body {
-                            height: 100%;
-                            margin: 0;
-                            padding: 0;
-                          }
-                        </style>
-                        <h6> {{ vereniging.adres }} </h6>
-                        </head>
-                        <body>
-                        <div id="map"></div>
-                        <script>
-                            // Initialize and add the map
-                            function initMap() {
-                                // The location of location
-                                var location = {lat: 52.159798, lng: 4.487944};
-                                // The map, centered at location
-                                var map = new google.maps.Map(
-                                    document.getElementById('map'), {zoom: 18, center: location});
-                                // The marker, positioned at location
-                                var marker = new google.maps.Marker({position: location, map: map});
-                            }
-                        </script>
+    <!--Modal Window 2-->
+    <div class="modal fade left" id="kaart" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="pull-left no-margin">Adres</h3>
+                    <button type="button" class="close" data-dismiss="modal" title="Close"><span class="glyphicon glyphicon-remove">x</span></button>
+                </div>
+                <div class="modal-body">
+                    <head>
+                    <style>
+                      /* Always set the map height explicitly to define the size of the div
+                       * element that contains the map. */
+                      #map {
+                        height: 350px;
+                        width: 325px;
+                      }
+                      /* Optional: Makes the sample page fill the window. */
+                      html, body {
+                        height: 100%;
+                        margin: 0;
+                        padding: 0;
+                      }
+                    </style>
+                    <h6> {{ vereniging.adres }} </h6>
+                    </head>
+                    <body>
+                    <div id="map"></div>
+                    <script>
+                        // Initialize and add the map
+                        function initMap() {
+                            // The location of location
+                            var location = {lat: {{ vereniging.lat }}, lng: {{ vereniging.lng }} };
+                            // The map, centered at location
+                            var map = new google.maps.Map(
+                                document.getElementById('map'), {zoom: 18, center: location});
+                            // The marker, positioned at location
+                            var marker = new google.maps.Marker({position: location, map: map});
+                        }
+                    </script>
 
-                          </body>
-                    </div>
+                      </body>
                 </div>
             </div>
         </div>
+    </div>
     </div>
 {% endblock %}

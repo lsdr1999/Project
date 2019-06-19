@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.db.models import Sum
-from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden
+from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden, Verant
 
 superuser = User.objects.filter(is_superuser = True)
 if superuser.count() == 0:
@@ -21,6 +21,7 @@ def index(request):
 
 def kieswijzer(request):
     context = {
+        "verant": Verant.objects.all(),
         "vragen": Vragen.objects.all(),
         "antwoorden": Antwoorden.objects.all(),
         "stad": Stad.objects.all(),
