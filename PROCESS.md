@@ -40,6 +40,46 @@ De contact pagina
 
 ## Day 3
 
+Op deze dag heb ik zoveel mogelijk geprobeerd om kleine bugs te verwijderen en alles netjes te maken. Zo is er uitgebreid gecontroleerd hoe het kwam dat modals achter de andere inhoud werden weergegeven, dit is sterk afhankelijk van de soort browser, Safari kan het niet aan zo blijkt... 
+Daarnaast is de gehele opmaak van alle onderdelen van de website afgerond, teksten zijn netjes gecentreerd en de weergave voor een iPhone is geoptimaliseerd, (zie afbeeldingen onderaan deze dagbeschrijving).
+
+Ook is er een kieswijzer toegevoegd, zie de afbeelding. Hiermee is dit punt: `Kieswijzer (vragen opeenvolgend, soort quiz).` Voltooid!
+
+Afbeelding Kieswijzer
+![](doc/jun6.png)
+
+
+`Google API (data inladen per vereniging, misschien via GeoCoding anders zelf set opbouwen).` Ook dit is geslaagd, wel kan er in een later stadium alsnog gekozen worden voor GeoCoding (van Adres naar coordinaten via Google Maps ipv handmatig) aangezien het uitzoeken van lat/lng coordinaten veel onnodige tijd kost wanneer je een vereniging moet toevoegen als Admin. 
+
+Afbeelding Google Maps API van twee verenigingen
+![](doc/jun7.png)
+![](doc/jun8.png)
+
+
+Daarnaast is het besluit genomen om de email niet verder te stylen, in verband met het leren van PHP (waar ik geen tijd voor heb). Ook de slider voor JavaScript is na een lange tijd testen nietig verklaard (het is onmogelijk om een javascript bestand te verwijderen nadat het is aangemaakt zonder alle styling te verliezen)
+De woordenlijst navigeerbaar maken a.d.h.v. letters is een optinoneel doel geworden. 
+
+Afbeeldingen met betrekking tot iPhone optimalisatie:
+
+![](doc/ip4.png)
+![](doc/ip2.png)
+![](doc/ip3.png)
+![](doc/ip1.png)
+
+## Day 4
+
+Op deze dag ben ik verder gegaan met het uitzoeken hoe dit doel `Kieswijzer (data opslaan en vergelijking met partijen uitvoeren -> tot 'beste' partij komen.` gerealiseerd kan worden. Hier was ik gisteravond al mee begonnen, echter mislukte dit volledig. 
+Het volgende leek mij het beste plan: Een array aanmaken met LocalStorage, deze vullen met de gegevens die uit de knoppen komen (eens oneens gvb) en dan met JSON een lijstje kunnen printen die, vervolgens, vergeleken kan worden met een JSON uitdraai van de database (de modal verant is hiervoor aangemaakt). 
+Dit is vandaag wedereom mislukt. Daarnaast heb ik tijd besteed om dit proces weer bij te werken en meerdere afbeeldingen toe te voegen. Hopelijk lukt het morgen om de laatste functionaliteit (de kieswijzer data opslag) werkend te krijgen met behulp van de begeleiding. 
+
+Het bespreken van het uitsluiten van bepaalde functies was al gedaan, vandaar dat dit al deels beschreven is bij Dag 3 van deze Week. Een kort overzichtje van de functies die worden geschrapt (uit de to-do lijst van deze week):
+
+- Woordenlijst navigeerbaar maken a.d.h.v. letters (modal is al gereed)
+- Email naar vereniging stylen (html/css)
+- Slider voor JavaScript met Bierdouche
+
+De teksten typen en nog wat verenigingen toevoegen wil ik komende week nog doen. Dit is echter van minder groot belang dan de data opslag van de kieswijzer. 
+
 <br>
 <br>
 <br>
