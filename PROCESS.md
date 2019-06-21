@@ -83,7 +83,7 @@ De teksten typen en nog wat verenigingen toevoegen wil ik komende week nog doen.
 ## Day 5
 
 Vandaag heb ik mij volledig kunnen richten op het afmaken van de kieswijzer. Data kan worden opgeslagen via een Ajax request (JSON) en ook de data uit de database wordt doorgestuurd via JSON naar de website. 
-Het laatste onderdeel is nu de vergelijking, hiermee heb ik een begin kunnen maken. Maar ik heb het idee dat er een verglijking tussen appels en de formules van Newton gedaan wordt, waardoor er geen uitkomst is. Ik hoop dat ik hier maandag nog mee geholpen kan worden. Het scherm wat volgt op de kieswijzer is alvast gemaakt (zodat er geen functionliteiten ontbreken/toegevoegd moeten worden volgende week). 
+Het laatste onderdeel is nu de vergelijking, hiermee heb ik een begin kunnen maken. Maar ik heb het idee dat er een vergelijking tussen appels en de formules van Newton gedaan wordt, waardoor er geen uitkomst mogelijk is. Ik hoop dat ik hier maandag nog mee geholpen kan worden. Het scherm wat volgt op de kieswijzer is alvast gemaakt, zodat er geen functionliteiten ontbreken/toegevoegd moeten worden volgende week. 
 
 Afbeeldingen van de stappen die de kieswijzer nu bevat (begin, eind en resultaat):
 ![](doc/ja1.png)
@@ -92,11 +92,9 @@ Afbeeldingen van de stappen die de kieswijzer nu bevat (begin, eind en resultaat
 
 ![](doc/ja3.png)
 
-Tijdens de weekelijkse meeting met de tutor hebben we allen onze beta versies kunnen laten zien en uitgebreid beoordeeld op verschillende punten. Ik kon vooral feedback geven op de interface/interactie (hier ontbreken knoppen, hier moet extra uitleg). Ook heb ik bij beide teamgenoten de website getest op bugs die ervoor zouden kunnen zorgen dat de website crashte. Dit lukte (helaas voor hun) nog erg goed. Ze hadden wel veel aan deze tests. 
+Tijdens de weekelijkse meeting met de tutor hebben we allen onze beta-versies kunnen laten zien en uitgebreid beoordeeld op verschillende punten. Ik kon vooral feedback geven op de interface/interactie (bijvoorbeeld: hier ontbreken knoppen, hier moet extra uitleg). Ook heb ik bij beide teamgenoten de website getest op bugs die ervoor zouden kunnen zorgen dat de website crashte. Dit lukte (helaas voor hun) nog té goed. Ze hadden wel veel aan deze tests. We hebben afgesproken dit volgende week nog uitgebreider te doen. 
 Over mijn website was niet veel te zeggen, het ziet er volledig en professioneel uit. Als de laatste functie echt werkt (de kieswijzer) dan is hij helemaal af!
 
-<br>
-<br>
 <br>
 <br>
 
@@ -145,8 +143,6 @@ Komend weekend ga ik mij focussen op de kieswijzer en de API van Google Maps.
 ##### Scherm 3: De mogelijkheid om een mail te versturen naar de betreffende vereniging
 ![](doc/vo3.png)
 
-<br>
-<br>
 <br>
 <br>
 
