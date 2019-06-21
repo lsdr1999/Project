@@ -1,4 +1,21 @@
 
+uitslag = request.POST
+context = {
+    "resultaat": uitslag,
+}
+return render(request, "resultaat.html", context)
+
+# for answer in request.POST:
+#     score = 0
+#     solution = list(data)
+#     for g in request.POST:
+#         try:
+#             solution.pop(solution.index(g))
+#             score += 1
+#         except ValueError:
+#             continue
+#     return score
+
 Functie voor bierdouche
 <style>
     .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;

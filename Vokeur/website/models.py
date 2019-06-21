@@ -48,12 +48,13 @@ class Verenigingen(models.Model):
         return f"{self.name}"
 
 class Verant(models.Model):
+    stad = models.ForeignKey(Stad, on_delete=models.CASCADE, related_name='verant')
     vereniging = models.ForeignKey(Verenigingen, on_delete=models.CASCADE, related_name='verant')
     vraag = models.ForeignKey(Vragen, on_delete=models.CASCADE, related_name='verant')
     antwoord = models.CharField(max_length=14, null=True, blank=True)
 
     def __str__(self):
-        return f"{self.vereniging} - {self.vraag} = {self.antwoord}"
+        return f"{self.vereniging} {self.vraag} [{self.antwoord}]"
 
 class Letter(models.Model):
     name = models.CharField(max_length=2)

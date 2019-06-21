@@ -48,9 +48,29 @@
 
 
     <body>
-        <h1 class="text-center"> Kieswijzer </h1>
+        <h1 class="text-center"> Kieswijzer voor {{ test.name }}</h1>
         <br><br>
 
+        <!-- <div class="row justify-content-center">
+            <div class="col-12 col-md-9 col-lg-7">
+                <div class="tab">
+                    <div class="card text-center">
+                        <div class="card-header"> <h4> Vo-keur kieswijzer </h4> </div>
+                        <div style="overflow:auto;">
+                            <div style="float:right;">
+                                <button type="button" class="btn btn-warning" id="nextBtn4" onclick="nextPrev(1, '')">Start</button>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <br><br>
+                            <h5 class="card-title"> Kieswijzer voor studentenverenigingen. </h5>
+                            <h6> Test jouw voorkeur aan de hand van 15 stellingen. </h6>
+                            <br><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>         -->
         <div class="row justify-content-center">
             <div class="col-12 col-md-9 col-lg-7">
                 <form id="regForm">
@@ -61,23 +81,23 @@
                     </div>
                     {% for vraag in antwoorden %}
                     <div class="tab">
-                        <div class="card text-center" class="">
+                        <div class="card text-center">
                             <div class="card-header"> <h4> {{ vraag.id }} </h4> </div>
                             <div style="overflow:auto;">
                                 <div style="float:left;">
                                     <button type="button" class="btn btn-warning" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
                                 </div>
                                 <div style="float:right;">
-                                    <button type="button" class="btn btn-warning" id="nextBtn" onclick="nextPrev(1)">Sla over</button>
+                                    <button type="button" class="btn btn-warning" id="nextBtn4" onclick="nextPrev(1, '')">Sla over</button>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <br><br>
                                 <h5 class="card-title"> {{ vraag.vraag }} </h5>
                                 <br><br>
-                                <a href="#" class="btn btn-warning" id="nextBtn" onclick="nextPrev(1)"> {{ vraag.eens }} </a>
-                                <a href="#" class="btn btn-warning" id="nextBtn" onclick="nextPrev(1)"> {{ vraag.geenvanbeide }} </a>
-                                <a href="#" class="btn btn-warning" id="nextBtn" onclick="nextPrev(1)"> {{ vraag.oneens }} </a>
+                                <a href="#" class="btn btn-warning" id="nextBtn1" onclick="nextPrev(1, 'Eens')"> {{ vraag.eens }} </a>
+                                <a href="#" class="btn btn-warning" id="nextBtn2" onclick="nextPrev(1, 'Geen van Beide')"> {{ vraag.geenvanbeide }} </a>
+                                <a href="#" class="btn btn-warning" id="nextBtn3" onclick="nextPrev(1, 'Oneens')"> {{ vraag.oneens }} </a>
                             </div>
                             <div class="card-footer text-muted">
                                 <p class="card-text">Selecteer één van de bovenstaande opties.</p>
@@ -85,6 +105,21 @@
                         </div>
                     </div>
                     {% endfor %}
+                    <div class="tab">
+                        <div class="card text-center">
+                            <div class="card-header"> <h4> Kieswijzer </h4> </div>
+                            <div style="overflow:auto;">
+                                <div style="float:left;">
+                                    <button type="button" class="btn btn-warning" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <br><br>
+                                <a href="#" class="btn btn-warning" id="result" onclick="results()"> Uitslag </a>
+                                <br><br><br><br>
+                            </div>
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
@@ -92,6 +127,7 @@
 
         <script>
 
+            var answers = {};
             var currentTab = 0; // Current tab is set to be the first tab (0)
             showTab(currentTab); // Display the current tab
 
@@ -109,11 +145,15 @@
               fixStepIndicator(n)
             }
 
-            function nextPrev(n) {
+            function nextPrev(n, answer) {
               // This function will figure out which tab to display
               var x = document.getElementsByClassName("tab");
               // Exit the function if any field in the current tab is invalid:
               if (n == 1 && !validateForm()) return false;
+              if (answer) {
+                answers[currentTab] = answer;
+            }
+                console.log(answers);
               // Hide the current tab:
               x[currentTab].style.display = "none";
               // Increase or decrease the current tab by 1:
@@ -126,6 +166,48 @@
               }
               // Otherwise, display the correct tab:
               showTab(currentTab);
+            }
+
+            function getCookie(name)
+            {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+
+            function results () {
+
+                $.ajaxSetup({
+                     beforeSend: function(xhr, settings) {
+                             // Only send the token to relative URLs i.e. locally.
+                             xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+                     }
+                });
+                $.ajax({
+                     url: "/api/uitslag",
+                     type: "POST",
+                     data: { answers: answers },
+                     dataType: "json",
+                     success: function (result) {
+                         window.location.href='/resultaat/{{ test.name }}';
+                         console.log(result);
+                     },
+                     error: function (xhr, ajaxOptions, thrownError) {
+                     alert(xhr.status);
+                     alert(thrownError);
+                     }
+                 });
             }
 
             function validateForm() {

@@ -4,6 +4,8 @@ from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.db.models import Sum
+from django.core import serializers
+
 from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden, Verant
 
 superuser = User.objects.filter(is_superuser = True)
@@ -19,11 +21,50 @@ def index(request):
     }
     return render(request, "index.html", context)
 
-def kieswijzer(request):
+def uitslag(request):
+
+    list1 = {}
+    list2 = {}
+
+    data = serializers.serialize("json", Verant.objects.all(), fields=('vereniging','antwoord'))
+    antwoorden = Verant.objects.all()
+    for answer in request.POST:
+        list1[vereniging] = request.POST
+        list2[vereniging] = antwoorden
+    # print(list1)
+    # print(list2)
+
+        for keyOne in list1:
+            for keyTwo in list2:
+                if keyOne == keyTwo:
+                    print(list1[keyOne], "=", list2[keyTwo])
+                else:
+                    print("helaas")
+
+    return HttpResponse(data, content_type="application/json")
+
+def resultaat (request, name):
+    stad = Stad.objects.get(name=name)
+    verenigingen = stad.verenigingen.all()
     context = {
+        "verenigingen": verenigingen,
         "verant": Verant.objects.all(),
         "vragen": Vragen.objects.all(),
         "antwoorden": Antwoorden.objects.all(),
+        "test": stad,
+        "stad": Stad.objects.all(),
+    }
+    return render(request, "resultaat.html", context)
+
+def kieswijzer(request, name):
+    stad = Stad.objects.get(name=name)
+    verenigingen = stad.verenigingen.all()
+    context = {
+        "verenigingen": verenigingen,
+        "verant": Verant.objects.all(),
+        "vragen": Vragen.objects.all(),
+        "antwoorden": Antwoorden.objects.all(),
+        "test": stad,
         "stad": Stad.objects.all(),
     }
     return render(request, "kieswijzer.html", context)
