@@ -22,17 +22,13 @@ def index(request):
     return render(request, "index.html", context)
 
 def uitslag(request):
-
     list1 = {}
     list2 = {}
-
     data = serializers.serialize("json", Verant.objects.all(), fields=('vereniging','antwoord'))
     antwoorden = Verant.objects.all()
     for answer in request.POST:
         list1[vereniging] = request.POST
         list2[vereniging] = antwoorden
-    # print(list1)
-    # print(list2)
 
         for keyOne in list1:
             for keyTwo in list2:
@@ -40,7 +36,6 @@ def uitslag(request):
                     print(list1[keyOne], "=", list2[keyTwo])
                 else:
                     print("helaas")
-
     return HttpResponse(data, content_type="application/json")
 
 def resultaat (request, name):
