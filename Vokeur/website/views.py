@@ -1,10 +1,12 @@
 from django.contrib.auth import authenticate, login, logout
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, JsonResponse
 from django.shortcuts import render
 from django.urls import reverse
 from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.core import serializers
+
+import pprint
 
 from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden, Verant
 
@@ -22,35 +24,21 @@ def index(request):
     return render(request, "index.html", context)
 
 def uitslag(request):
-    # list1 = {}
-    # list2 = {}
-    data = serializers.serialize("json", Verant.objects.all(), fields=('vereniging','antwoord'))
-    # antwoorden = Verant.objects.all()
-    # for answer in request.POST:
-    #     list1[vereniging] = request.POST
-    #     list2[vereniging] = antwoorden
-    #
-    #     for keyOne in list1:
-    #         for keyTwo in list2:
-    #             if keyOne == keyTwo:
-    #                 print(list1[keyOne], "=", list2[keyTwo])
-    #             else:
-    #                 print("helaas")
+    list1 = {}
 
-    return HttpResponse(data, content_type="application/json")
+    stadnaam = request.POST["stad"]
 
-def resultaat (request, name):
-    stad = Stad.objects.get(name=name)
-    verenigingen = stad.verenigingen.all()
-    context = {
-        "verenigingen": verenigingen,
-        "verant": Verant.objects.all(),
-        "vragen": Vragen.objects.all(),
-        "antwoorden": Antwoorden.objects.all(),
-        "test": stad,
-        "stad": Stad.objects.all(),
-    }
-    return render(request, "resultaat.html", context)
+    for vraag in Vragen.objects.all():
+        # print(vraag)
+        temp_dict ={}
+        steden = Stad.objects.get(name__exact=stadnaam)
+        for antwoord in Verant.objects.filter(vraag=vraag, stad=steden):
+            temp_dict[antwoord.vereniging.name] = antwoord.antwoord
+        list1[vraag.id] = temp_dict
+    pp = pprint.PrettyPrinter(indent=2)
+    pp.pprint(list1)
+
+    return JsonResponse(list1, content_type="application/json")
 
 def kieswijzer(request, name):
     stad = Stad.objects.get(name=name)

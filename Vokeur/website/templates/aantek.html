@@ -103,3 +103,13 @@ Wat vinden de verenigingen?
             {% endfor %}
         </div>
     </div>
+
+    function opps() {
+        document.getElementById("overzicht").innerHTML = '<ul id="oz"></ul>';
+        var oz = document.getElementById("oz")
+
+        var lijst_item = document.createElement("li");
+        lijst_item.className = "list-group-item";
+        lijst_item.innerHTML = `${ant}: <span class="badge badge-warning"> ${verant[ant]} </span>`;
+        oz.appendChild(lijst_item);
+    };    

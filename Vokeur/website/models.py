@@ -4,7 +4,7 @@ from django.conf import settings
 # Create your models here.
 
 class Vragen(models.Model):
-    id = models.DecimalField(max_digits=4, decimal_places=0, primary_key=True)
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=64)
 
     def __str__(self):

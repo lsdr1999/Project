@@ -11,6 +11,5 @@ urlpatterns = [
   path("contact/", views.contact, name="contact"),
   path("woorden/", views.woorden, name="woorden"),
   path("api/uitslag", views.uitslag, name="uitslag"),
-  path("resultaat/<str:name>/", views.resultaat, name="resultaat"),
   path("vereniging/<str:url>/", views.vereniging, name="vereniging"),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

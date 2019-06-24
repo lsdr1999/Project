@@ -24,6 +24,9 @@
           src="http://maps.googleapis.com/maps/api/js?key=AIzaSyCuxwSPTKkXVAt87EvJ9pfcOoT_m5Lz71c&callback=initMap">
         </script>
 
+        <script src="{% static 'website/mouse.js' %}"></script>
+
+
         <title>{% block title%} {% endblock %}</title>
     </head>
 
@@ -60,7 +63,7 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ml-auto mt-2 mb-0 h5">
-                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'woorden' %}">Woorden</a></li>
+                    <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'woorden' %}">Woordenboek</a></li>
                     <li class="nav-item"><a class="nav-link" id="nav-color" href="{% url 'contact' %}">Contact</a></li>
                 </ul>
             </div>
