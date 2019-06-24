@@ -19,7 +19,7 @@
                         <div class="card-header"> <h4> Vo-keur kieswijzer </h4> </div>
                         <div style="overflow:auto;">
                             <div style="float:right;">
-                                <button type="button" class="btn btn-warning" id="but">Start</button>
+                                <button type="button" class="btn btn-warning hvr-skew-forward" id="but">Start</button>
                             </div>
                         </div>
                         <div class="card-body">
@@ -48,19 +48,19 @@
                             <div class="card-header"> <h4> {{ vraag.id }} </h4> </div>
                             <div style="overflow:auto;">
                                 <div style="float:left;">
-                                    <button type="button" class="btn btn-warning" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
+                                    <button type="button" class="btn btn-warning hvr-skew-backward" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
                                 </div>
                                 <div style="float:right;">
-                                    <button type="button" class="btn btn-warning" id="nextBtn4" onclick="nextPrev(1, '')">Sla over</button>
+                                    <button type="button" class="btn btn-warning hvr-skew-forward" id="nextBtn4" onclick="nextPrev(1, '')">Sla over</button>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <br><br>
                                 <h5 class="card-title"> {{ vraag.vraag }} </h5>
                                 <br><br>
-                                <a href="#" class="btn btn-warning" id="nextBtn1" onclick="nextPrev(1, 'Eens')"> {{ vraag.eens }} </a>
-                                <a href="#" class="btn btn-warning" id="nextBtn2" onclick="nextPrev(1, 'Geen van Beide')"> {{ vraag.geenvanbeide }} </a>
-                                <a href="#" class="btn btn-warning" id="nextBtn3" onclick="nextPrev(1, 'Oneens')"> {{ vraag.oneens }} </a>
+                                <a href="#" class="btn btn-warning hvr-buzz" id="nextBtn1" onclick="nextPrev(1, 'Eens')"> {{ vraag.eens }} </a>
+                                <a href="#" class="btn btn-warning hvr-wobble-horizontal" id="nextBtn2" onclick="nextPrev(1, 'Geen van Beide')"> {{ vraag.geenvanbeide }} </a>
+                                <a href="#" class="btn btn-warning hvr-buzz" id="nextBtn3" onclick="nextPrev(1, 'Oneens')"> {{ vraag.oneens }} </a>
                             </div>
                             <div class="card-footer text-muted">
                                 <p class="card-text">Selecteer één van de bovenstaande opties.</p>
@@ -73,12 +73,12 @@
                             <div class="card-header"> <h4> Kieswijzer </h4> </div>
                             <div style="overflow:auto;">
                                 <div style="float:left;">
-                                    <button type="button" class="btn btn-warning" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
+                                    <button type="button" class="btn btn-warning hvr-skew-backward" id="prevBtn" onclick="nextPrev(-1)">Terug</button>
                                 </div>
                             </div>
                             <div class="card-body">
                                 <br><br>
-                                <a href="#" class="btn btn-warning" id="result" onclick="results()"> Uitslag </a>
+                                <a href="#" class="btn btn-warning hvr-grow-shadow" id="result" onclick="results()"> Uitslag </a>
                                 <br><br>
                                 <div id="tekst"></div>
                                 <div id="resultaten"></div>
