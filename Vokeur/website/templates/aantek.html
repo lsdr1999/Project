@@ -17,6 +17,35 @@ return render(request, "resultaat.html", context)
 #     return score
 
 Functie voor bierdouche
+
+<!-- <style>
+    .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;
+    }
+</style>
+
+<head>
+<input id="mylink" type="checkbox" onclick="myFunction()">
+</head>
+    <script>
+    function myFunction() {
+      var checkBox = document.getElementById("mylink");
+      if (checkBox.checked){
+          var script = document.createElement("script");
+          script.id = "biercursor"
+          script.type = "text/javascript";
+          script.src = "/static/website/script.js";
+          document.getElementsById("biercursor")[0].appendChild(script);
+          return false;
+      } else {
+          script.type = "text/javascript";
+          script.src = "/static/website/script.js";
+          script.id = "biercursor"
+          document.getElementsByTagName("head")[0].removeChild(script);
+          return false;
+      }
+    }
+    </script> -->
+    
 <style>
     .slow  .toggle-group { transition: left 0.7s; -webkit-transition: left 0.7s;
     }
@@ -112,4 +141,4 @@ Wat vinden de verenigingen?
         lijst_item.className = "list-group-item";
         lijst_item.innerHTML = `${ant}: <span class="badge badge-warning"> ${verant[ant]} </span>`;
         oz.appendChild(lijst_item);
-    };    
+    };

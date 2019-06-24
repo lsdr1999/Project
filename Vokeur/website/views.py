@@ -6,8 +6,6 @@ from django.contrib.auth.models import User
 from django.db.models import Sum
 from django.core import serializers
 
-import pprint
-
 from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden, Verant
 
 superuser = User.objects.filter(is_superuser = True)
@@ -25,18 +23,14 @@ def index(request):
 
 def uitslag(request):
     list1 = {}
-
     stadnaam = request.POST["stad"]
 
     for vraag in Vragen.objects.all():
-        # print(vraag)
         temp_dict ={}
         steden = Stad.objects.get(name__exact=stadnaam)
         for antwoord in Verant.objects.filter(vraag=vraag, stad=steden):
             temp_dict[antwoord.vereniging.name] = antwoord.antwoord
         list1[vraag.id] = temp_dict
-    pp = pprint.PrettyPrinter(indent=2)
-    pp.pprint(list1)
 
     return JsonResponse(list1, content_type="application/json")
 

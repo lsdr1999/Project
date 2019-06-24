@@ -51,10 +51,12 @@
             <div class="col-sm-4"> <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mailen" href= "{{ vereniging.mail }}"> Mail: {{ vereniging.mail }} </button> </div>
         </div>
         <br>
+    </div>
 
 {% endblock %}
 
 {% block modal %}
+
     <!--Modal Window-->
     <div class="modal fade left" id="mailen" tabindex="-1" role="dialog">
         <div class="modal-dialog" role="document">
@@ -69,12 +71,6 @@
                             <label for="name" class="col-sm-3 control-label">Naam:</label>
                             <div class="col-sm-9">
                                 <input type="text" class="form-control" id="name" name="name" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email" class="col-sm-3 control-label">Email: </label>
-                            <div class="col-sm-9">
-                                <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                         </div>
                         <div class="form-group">
@@ -114,41 +110,42 @@
                 </div>
                 <div class="modal-body">
                     <head>
-                    <style>
-                      /* Always set the map height explicitly to define the size of the div
-                       * element that contains the map. */
-                      #map {
-                        height: 350px;
-                        width: 325px;
-                      }
-                      /* Optional: Makes the sample page fill the window. */
-                      html, body {
-                        height: 100%;
-                        margin: 0;
-                        padding: 0;
-                      }
-                    </style>
-                    <h6> {{ vereniging.adres }} </h6>
+                        <style>
+                            /* Always set the map height explicitly to define the size of the div
+                            * element that contains the map. */
+                            #map {
+                                height: 350px;
+                                width: 325px;
+                            }
+                            /* Optional: Makes the sample page fill the window. */
+                            html, body {
+                                height: 100%;
+                                margin: 0;
+                                padding: 0;
+                            }
+                        </style>
+
+                        <h6> {{ vereniging.adres }} </h6>
                     </head>
                     <body>
-                    <div id="map"></div>
-                    <script>
-                        // Initialize and add the map
-                        function initMap() {
-                            // The location of location
-                            var location = {lat: {{ vereniging.lat }}, lng: {{ vereniging.lng }} };
-                            // The map, centered at location
-                            var map = new google.maps.Map(
-                                document.getElementById('map'), {zoom: 18, center: location});
-                            // The marker, positioned at location
-                            var marker = new google.maps.Marker({position: location, map: map});
-                        }
-                    </script>
+                        <div id="map"></div>
 
-                      </body>
+                        <script>
+                            // Initialize and add the map
+                            function initMap() {
+                                // The location of location
+                                var location = {lat: {{ vereniging.lat }}, lng: {{ vereniging.lng }} };
+                                // The map, centered at location
+                                var map = new google.maps.Map(
+                                    document.getElementById('map'), {zoom: 18, center: location});
+                                // The marker, positioned at location
+                                var marker = new google.maps.Marker({position: location, map: map});
+                            }
+                        </script>
+                    </body>
                 </div>
             </div>
         </div>
     </div>
-    </div>
+
 {% endblock %}
