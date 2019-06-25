@@ -2,6 +2,10 @@
 
 Lars de Roos | Web Apps Project
 
+### Overview of all relevant files in the /vokeur folder:
+#### manage.py
+This is the file which runs the entire website via `python3 manage.py runserver`. 
+
 ### Overview of all relevant files in the /website folder:
 #### /static/website/
 This folder contains the following files:
@@ -32,9 +36,3 @@ This is where all urls are created.
 
 #### views.py
 This is the main python file, which consists of all the important python code to get everything working.
-
-### Overview of all relevant files in the /vokeur folder:
-
-
-#### manage.py
-This is the file which runs the entire website via `python3 manage.py runserver`. 
