@@ -23,4 +23,4 @@ Ask the maintainers nicely to add a license. Unless the software includes strong
 Don’t use the software. Find or create an alternative that is under an open source license.
 Negotiate a private license. Bring your lawyer.
 
-[Information from this link](https://choosealicense.com/no-permission/)
+This statement was found at [this link](https://choosealicense.com/no-permission/).
