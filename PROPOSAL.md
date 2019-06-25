@@ -48,3 +48,4 @@ Kieswijzer voor studentenverenigingen voor studenten.
 ##### Hardest parts	
 - Lastig om snel data te vinden
 - Geen API's 
+
