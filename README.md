@@ -17,17 +17,15 @@ The number of students who join student associations has been falling for a long
 ##### Verenigingen Leiden
 ![](doc/e5.png)
 ##### Vereniging uit Leiden
-![](doc/e5.1.png)
-##### Vereniging uit Leiden (Maps)
-![](doc/e5.2.png)
-##### Vereniging uit Leiden (Mail)
-![](doc/e5.3.png)
-##### Verenigingen Utrecht
 ![](doc/e6.png)
-##### Woordenboek
+##### Vereniging uit Leiden (Mail)
 ![](doc/e7.png)
-##### Contact informatie
+##### Vereniging uit Leiden (Maps)
 ![](doc/e8.png)
+##### Woordenboek
+![](doc/e9.png)
+##### Contact informatie
+![](doc/e10.png)
 
 #### Copyright Statement
 
