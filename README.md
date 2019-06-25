@@ -29,11 +29,11 @@ The number of students who join student associations has been falling for a long
 
 #### Copyright Statement
 
-##### Own copyright statement 
+##### Copyright Notice
 Nobody else can use, copy, distribute, or modify my work without being at risk of take-downs, shake-downs, or litigation.
 I am the only person who owns the rights to the materials in this repository! 
 
-2019 (c) - Lars de Roos -
+Copyright (c) 2019 - Lars de Roos.
 
 ##### Sources of external code, images and other materials 
 
