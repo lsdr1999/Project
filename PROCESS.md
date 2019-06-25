@@ -2,6 +2,39 @@
 
 Lars de Roos | Web Apps Project
 
+
+# Week 4
+
+## Day 1
+Op de eerste dag van deze laatste week moest ik nog zorgen dat de vergelijking daadwerkelijk een uitkomst zou geven. Na een korte tijd doorprogrammeren bleek het al te werken (!!!). Alle to do's die ik vorige week had opgesteld waren daardoor behaald. 
+De nieuwe to do's voor deze week, naast het eindrapport en de video zijn:
+- Verenigingen toevoegen
+- Alles mooier maken (look/feel van de website)
+- Code opschonen
+
+Sommige van deze punten heb ik dezelfde dag nog kunnen doen. Zo kwam ik er ook achter dat enkele optionele doelen van vorige week niet meer nodig/haalbaar waren. Om die reden is er nu 'altijd' een biermuis, is de emailstyling aangespast naar een simpele 'naam en bericht' en zijn er geen grote lappen tekst getypt ter ondersteuning van het geheel (de website spreekt voor zich..). 
+
+Enkele punten om te overdenken:
+- Stad uniek maken in admin zodat de combinatie van Groningen + Minerva automatisch niet mogelijk is.
+- Order_by query aanmaken zodat mensen een eigen overzicht kunnen genereren in verenigingen.html (niet noodzakelijk, wel leuk).
+
+! Screenshots van deze week zijn te vinden in de huidige README. !
+
+## Day 2
+Vandaag heb ik ruim 20 verenigingen toegevoegd, dit heeft bij elkaar bijna 6 uur gekost. Dit maakte het direct duidelijk dat het onverstandig zou zijn om deze manier van data vergaren te houden wanneer er meer interesse zou zijn in het uitbouwen van deze website. Ook bleek dat enkele verenigingen dermate weinig informatie beschikbaar hadden dat werd afgezien van het toevoegen van de vereniging in kwestie. In twee gevallen was het niet direct mogelijk om de contributie in te zien, om deze reden is het 'standaard bedrag' van €100,- geintroduceerd. 
+
+Nog een kleine bug is ontdekt:
+- Volgorde presenteren van 'beste match'? Welke van de twee stukken code gebruiken?
+
+De code is volledig opgeschoont, er zijn meerdere readme-achtige bestanden gemaakt (inclusief nieuwe afbeeldingen e.d.) en nu dit PROCESS.md ook is bijgewerkt hoef ik voor deze week enkel nog te zorgen dat ik de code, de video en het verslag op tijd inlever. 
+
+! Screenshots van deze week zijn te vinden in de huidige README. !
+
+## Day 3
+
+<br>
+<br>
+
 # Week 3
 
 ## Day 1
