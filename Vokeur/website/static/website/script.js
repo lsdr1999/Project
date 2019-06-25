@@ -91,6 +91,39 @@ function results () {
     });
 }
 
+// function results2 (result) {
+//     var score = {}
+//     for (var i in answers) {
+//         vergelijk0 = answers[i]
+//         verant = result[i];
+//         for (ant in verant) {
+//             vergelijk1 = verant[ant]
+//             if (vergelijk0 == vergelijk1) {
+//                 score[ant] = score[ant] + 1 || 1
+//                 console.log(score);
+//             };
+//         };
+//     };
+//     document.getElementById('tekst').innerHTML = "<p>De volgende verenigingen sluiten het beste aan bij jouw antwoorden op deze kieswijzer:</p>"
+//     document.getElementById('resultaten').innerHTML = '<ul id="list"></ul>';
+//     var list = document.getElementById("list")
+//
+//     for (i in score) {
+//         var items = Object.keys(score).map(function(key) {
+//             return [key, score[key]];
+//         });
+//         items.sort(function(first, second) {
+//             return second[1] - first[1];
+//         });
+//         console.log(items.slice(0, 5));
+//
+//         var list_item = document.createElement("li");
+//         list_item.className = "list-group-item";
+//         list_item.innerHTML = `${i}: <span class="badge badge-warning"> ${score[i]}/15 </span>`;
+//         list.appendChild(list_item);
+//     }
+// };
+
 function results2 (result) {
     var score = {}
     for (var i in answers) {
@@ -108,18 +141,21 @@ function results2 (result) {
     document.getElementById('resultaten').innerHTML = '<ul id="list"></ul>';
     var list = document.getElementById("list")
 
-    for (i in score) {
-        var items = Object.keys(score).map(function(key) {
-            return [key, score[key]];
-        });
-        items.sort(function(first, second) {
-            return second[1] - first[1];
-        });
-        console.log(items.slice(0, 5));
+    var items = Object.keys(score).map(function(key) {
+        return [key, score[key]];
+    });
+    items.sort(function(first, second) {
+        return second[1] - first[1];
+    });
+    var temp = items.slice(0, 5);
 
+    console.log(temp);
+    console.log(items);
+
+    for (i in temp) {
         var list_item = document.createElement("li");
         list_item.className = "list-group-item";
-        list_item.innerHTML = `${i}: <span class="badge badge-warning"> ${score[i]}/15 </span>`;
+        list_item.innerHTML = `${temp[i]}/15`;
         list.appendChild(list_item);
     }
 };

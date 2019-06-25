@@ -49,7 +49,7 @@ def kieswijzer(request, name):
 
 def verenigingen(request, name):
     stad = Stad.objects.get(name=name)
-    verenigingen = stad.verenigingen.all()
+    verenigingen = stad.verenigingen.all().order_by('name')
     context = {
         "verenigingen": verenigingen,
         "test": stad,

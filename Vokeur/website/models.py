@@ -31,7 +31,7 @@ class Verenigingen(models.Model):
     url = models.CharField(max_length=64, null=True, blank=True)
     name = models.CharField(max_length=64, null=True, blank=True)
     afbeelding = models.ImageField(null=True, blank=True)
-    adres = models.CharField(max_length=64, null=True, blank=True)
+    adres = models.CharField(max_length=200, null=True, blank=True)
     leden = models.DecimalField(max_digits=5, decimal_places=0, null=True, blank=True)
     jaar = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True)
     contributie = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
@@ -41,7 +41,7 @@ class Verenigingen(models.Model):
     website = models.URLField(max_length=64, null=True, blank=True)
     lat = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
     lng = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)
-    verhaal = models.CharField(max_length=600, null=True, blank=True)
+    verhaal = models.CharField(max_length=1200, null=True, blank=True)
     stad = models.ForeignKey(Stad, on_delete=models.CASCADE, related_name='verenigingen')
 
     def __str__(self):
