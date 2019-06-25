@@ -2,7 +2,7 @@
 
 Lars de Roos | Web Apps Project
 
-### Overview of all relevant files in the /vokeur folder:
+### Overview of all relevant files in this Vokeur folder:
 #### manage.py
 This is the file which runs the entire website via `python3 manage.py runserver`. 
 
