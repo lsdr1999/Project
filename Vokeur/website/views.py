@@ -8,12 +8,12 @@ from django.core import serializers
 
 from .models import Vragen, Antwoorden, Stad, Verenigingen, Letter, Woorden, Verant
 
-superuser = User.objects.filter(is_superuser = True)
-if superuser.count() == 0:
-    superuser = User.objects.create_user("Lars", "lars@gmail.com", "1234")
-    superuser.is_superuser = True
-    superuser.is_staff = True
-    superuser.save()
+# superuser = User.objects.filter(is_superuser = True)
+# if superuser.count() == 0:
+#     superuser = User.objects.create_user("Lars", "lars@gmail.com", "1234")
+#     superuser.is_superuser = True
+#     superuser.is_staff = True
+#     superuser.save()
 
 def index(request):
     context = {
