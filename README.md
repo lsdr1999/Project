@@ -9,7 +9,7 @@ The number of students who join student associations has been falling for a long
 [Vo-keur](https://vokeur.herokuapp.com)
 Notes to user: it is not possible to use the Google Maps API in this version. 
 
-#### Screenshots
+#### Screenshots Computer
 ##### Homepage
 ![](doc/e1.png)
 ##### Kieswijzer begin
@@ -30,6 +30,11 @@ Notes to user: it is not possible to use the Google Maps API in this version.
 ![](doc/e9.png)
 ##### Contact informatie
 ![](doc/e10.png)
+
+#### Screenshots iPhone
+![](doc/iphone1.png)
+![](doc/iphone2.png)
+![](doc/iphone3.png)
 
 #### Copyright Statement
 
