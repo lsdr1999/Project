@@ -79,7 +79,7 @@
 .word span {
   cursor: pointer;
   display: inline-block;
-  font-size: 30px;
+  font-size: 20px;
   color: black;
   user-select: none;
   line-height: 0.8;

@@ -82,7 +82,7 @@ function results () {
         data: { stad: stad },
         dataType: "json",
         success: function (result) {
-            results2(result);
+            uitslag(result);
         },
         error: function (xhr, ajaxOptions, thrownError) {
             alert(xhr.status);
@@ -91,7 +91,7 @@ function results () {
     });
 }
 
-function results2 (result) {
+function uitslag (result) {
     var score = {}
     for (var i in answers) {
         vergelijk0 = answers[i]
@@ -100,7 +100,6 @@ function results2 (result) {
             vergelijk1 = verant[ant]
             if (vergelijk0 == vergelijk1) {
                 score[ant] = score[ant] + 1 || 1
-                console.log(score);
             };
         };
     };
@@ -115,9 +114,6 @@ function results2 (result) {
         return second[1] - first[1];
     });
     var temp = items.slice(0, 5);
-
-    console.log(temp);
-    console.log(items);
 
     for (i in temp) {
         var list_item = document.createElement("li");

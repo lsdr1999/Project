@@ -26,9 +26,9 @@ SECRET_KEY = 't0q&htw-rvya*_@u6+#xgfko-j$pei+@qyf@pr9zje5i%e9d!_'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "vokeur.herokuapp.com"
+    "vokeur.herokuapp.com",
+    "127.0.0.1"
 ]
-
 
 # Application definition
 
