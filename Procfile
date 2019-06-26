@@ -1,1 +1,1 @@
-web: gunicorn Vokeur/Vokeur.wsgi
+web: gunicorn Vokeur.wsgi --chdir Vokeur
