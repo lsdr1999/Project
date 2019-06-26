@@ -25,7 +25,9 @@ SECRET_KEY = 't0q&htw-rvya*_@u6+#xgfko-j$pei+@qyf@pr9zje5i%e9d!_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    "vokeur.herokuapp.com"
+]
 
 
 # Application definition
