@@ -1,1 +1,1 @@
-web: gunicorn vokeur.wsgi
+web: gunicorn Vokeur/Vokeur.wsgi
