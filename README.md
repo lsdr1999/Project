@@ -31,9 +31,9 @@ Note to user: in the https version, [this version](https://vokeur.herokuapp.com)
 ![](doc/e10.png)
 
 #### Screenshots iPhone
-![](doc/iphone1.png)
-![](doc/iphone2.png)
-![](doc/iphone3.png)
+![](doc/iphone1.PNG)
+![](doc/iphone2.PNG)
+![](doc/iphone3.PNG)
 
 #### Copyright Statement
 
