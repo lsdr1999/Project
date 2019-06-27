@@ -44,7 +44,7 @@ A video walkthrough of this webapplication can be found via [this link]().
 ##### Contact informatie
 ![](doc/e10.png)
 
-#### Screenshots iPhone
+## Screenshots iPhone
 ![](doc/iphone1.PNG)
 ![](doc/iphone2.PNG)
 ![](doc/iphone3.PNG)
@@ -77,4 +77,4 @@ All images in `Vokeur/website/media` are from the facebook pages or websites of 
 Lars de Roos
 
 ## Acknowledgements
-Thanks to Marijn Jansen for all the guidance and advice I received during the development of this project. I also want to thank everyone who is involved in the organization of the minor Programming semester 2 of 2019.
+Thanks to Marijn Jansen for all the guidance and advice I received during the development of this project. I also want to thank everyone who was involved in the organization of the minor Programming semester 2.
