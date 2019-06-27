@@ -2,7 +2,7 @@
 
 Lars de Roos | Web Apps Project
 
-#### Purpose
+## Introduction
 The number of students who join student associations has been falling for a long time. This is due to poor publicity and the costs of membership. Yet on the internet the question is often asked "Which student association suits me?". This web application has been designed to respond to this. It serves as a guide for student associations, to find the perfect match as a (future) student!
 
 #### Check the website right here -> [Vo-keur](http://vokeur.herokuapp.com)
@@ -10,22 +10,19 @@ Note to user:
 - It also works on smartphones, so feel free to use your phone. 
 - In the https version, [this version](https://vokeur.herokuapp.com), the Google Maps API does not work.
 
-#### Getting started 
-
-##### Requirements for the unpublished version
-
+## Getting started 
 Make sure that you have a copy of Python 3.7 or higher installed on your machine. You’ll also need to install pip. If you downloaded Python from Python’s website, you likely already have pip installed (you can check by running `pip` in a terminal window). If you don’t have it installed, be sure to install it before moving on!
 
 1. Clone or download our GitHub repository
 2. In a terminal window, navigate to the directory you saved this repository on.
-3. Run python -m pip install -r requirements.txt in your terminal window to make sure that all of the necessary Python packages are installed. 
+3. Run `pip install -r requirements.txt` in your terminal window to make sure that all of the necessary Python packages are installed. 
 4. In your terminal window, navigate to the `vokeur` folder.
 5. Use `python3 manage.py runserver` to get started. 
 
-##### Product Video
+## Product Video
 A video walkthrough of this webapplication can be found via [this link]().
 
-#### Screenshots Computer
+## Screenshots Computer
 ##### Homepage
 ![](doc/e1.png)
 ##### Kieswijzer begin
@@ -52,7 +49,7 @@ A video walkthrough of this webapplication can be found via [this link]().
 ![](doc/iphone2.PNG)
 ![](doc/iphone3.PNG)
 
-#### Copyright Statement
+## Copyright Statement
 
 ##### Copyright Notice
 Nobody else can use, copy, distribute, or modify my work without being at risk of take-downs, shake-downs, or litigation.
@@ -76,8 +73,8 @@ The text effect "spinner", which can be found in `Vokeur/website/static/website/
 
 All images in `Vokeur/website/media` are from the facebook pages or websites of the used associations.
 
-#### Author
+## Author
 Lars de Roos
 
-#### Acknowledgements
+## Acknowledgements
 Thanks to Marijn Jansen for all the guidance and advice I received during the development of this project. I also want to thank everyone who is involved in the organization of the minor Programming semester 2 of 2019.
