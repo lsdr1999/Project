@@ -31,6 +31,29 @@ De code is volledig opgeschoont, er zijn meerdere readme-achtige bestanden gemaa
 ! Screenshots van deze week zijn te vinden in de huidige README. !
 
 ## Day 3
+De website is gepubliceerd! Na een kleine fix in de ochtend heb ik de rest van de dag samen met mijn tutor gezorgd dat de website online kwam te staan. Hiervoor hebben we Heroku gebruikt. In de README vind je de link naar de website. De website kon, omdat hij online kwam, meteen perfect aangepast worden voor smartphones.
+
+Nadat dit was gedaan is de website gedeeld met ruim 30 mensen die allemaal feedback konden leveren. Zo werd al snel door meerdere mensen gewezen op het feit dat het woordenboek niet makkelijk genoeg te lezen was, om die reden is dat direct aangepast. 
+Ook andere punten van feedback en/of toevoegingen werden genoemd die hieronder uiteengezet zijn: 
+
+- Wat vinden de verenigingen toevoegen.
+- Data opslag, wat zijn de uitkomsten van vrienden. 
+    - (ranking, met sterren).
+- Icoon (favicon) maken.
+- 'Over mij' toevoegen “Dat je mensen het gevoel geeft dat dit niet door een of andere oude zak is gedaan”.
+- Brassen “Niet alleen 1vs1, maar ook bij een inval, waarbij een hele vereniging op bezoek komt bij een andere vereniging (volgens mij altijd op afspraak) en dan probeert de 'gast' de bar over te nemen van de 'gastheer' oftewel gewoon hooligans Ajax VS hooligans Feyenoord”. 
+
+Het is erg fijn dat de website online staat, vooral omdat dit zorgt voor een veel duidelijkere en makkelijkere manier voor mensen om interactie te hebben met mijn website. Ik denk om die reden dat het in het vervolg verplicht moet worden gesteld een website te publiceren, ook omdat er op die manier voor en door een breder publiek bugs uit gehaald kunnen worden en het gebruikersgemak kan worden opgehoogd.
+
+! Screenshots van deze week zijn te vinden in de huidige README. !
+
+## Day 4
+De laatste dag die in het process book wordt beschreven... 
+Deze dag heb ik een favicon toegevoegd, nogmaals de code gecheckt (de deadline was opeens verschoven) en heb ik het verslag en filmpje gemaakt. 
+
+Ik heb erg genoten van de afgelopen maand (en ook van de maanden die daaraan vooraf gingen). Eindelijk heb ik het idee dat ik het echt een keer druk heb gehad (iets wat voor mij onbekend was tot nu toe). Ook heb ik iets volledig nieuws geleerd en een nieuwe hobby gevonden in het bedenken en bouwen van websites. Ik wil graag het hele MProg-team bedanken, met in het bijzonder Marijn: Hij was gedurende dit gehele semester mijn tutor. 
+
+Nogmaals bedankt voor alles en alvast een fijne zomer!
 
 <br>
 <br>
