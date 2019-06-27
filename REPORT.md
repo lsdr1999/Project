@@ -112,8 +112,8 @@ The choices that arise from the above challenges have led to progress. If a func
 In this way I have always been able to maintain the right prioritization in order to arrive at a fully working end product. In PROPOSAL.md you can read that a chat function could become optional, this idea was never worked on again. Simply because it does not belong to the website. It was very good in this respect to do things differently than was initially planned, but as mentioned earlier: many parts went perfectly according to plan and for that reason the end product looks very much like the initial DESIGN.md file.
 There have been no major trade-offs, but in `FutureWork` I describe some nicer/better/smarter solutions and additions. If I had more time I would have added more associations to hand in an even better Proof-of-Concept. Other additions that would be possible with more time (and maybe even money) can be found again in `FutureWork`. Finally, I want to emphasize how proud and happy I am with my end product. We learned from CS50 that you have to see where you end up compared to YOURSELF. I had never believed that it would be possible for me to program and launch a completely self-designed website...
 
-##### FutureWork
-Additions
+#### FutureWork
+##### Additions
 
 - Associations can create an account, add their details (name, story, photo) and fill in the 'kieswijzer'. This way it can become possible to add much more (correct) data in a shorter time.
 - "What do the associations think", offering the option to see in the 'kieswijzer' what certain associations think of the position.
@@ -122,7 +122,7 @@ Additions
 - Add "About me", "That you give people the feeling that this is not done by some old bag". - said a fellow student.
 - Create Order_by query so that people can generate their own overview in `verenigingen.html`.
 
-Adjustments
+##### Adjustments
 
 - Brassen, “Niet alleen 1vs1, maar ook bij een inval, waarbij een hele vereniging op bezoek komt bij een andere vereniging (volgens mij altijd op afspraak) en dan probeert de 'gast' de bar over te nemen van de 'gastheer' oftewel gewoon hooligans Ajax VS hooligans Feyenoord”. - said a fellow student.
 - Opt for GeoCoding (from Address to coordinates via Google Maps instead of manually) since figuring out lat / lng coordinates takes a lot of unnecessary time when you have to add an association as admin.
