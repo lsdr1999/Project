@@ -19,7 +19,7 @@ Make sure that you have a copy of Python 3.7 or higher installed on your machine
 4. In your terminal window, navigate to the `vokeur` folder.
 5. Use `python3 manage.py runserver` to get started. 
 
-## Product Video
+## Product video
 A video walkthrough of this webapplication can be found via [this link]().
 
 ## Screenshots Computer
