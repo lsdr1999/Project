@@ -23,7 +23,8 @@ If you want to view, change or add data to the models, go to: `http://127.0.0.1:
 Check `vokeur/website/views.py` (superuser) for the login details.
 
 ## Product video
-A video walkthrough of this webapplication can be found via [this link]().
+A video walkthrough of this webapplication can be found via [this link](https://youtu.be/qxGKKuQUWag).
+The video was recorded on a computer because, in my opinion, this gives a better overview of the content of the web application. Of course it is still possible to open it on a smartphone.
 
 ## Screenshots Computer (MacBook)
 ##### Homepage
