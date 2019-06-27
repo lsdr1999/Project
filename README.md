@@ -3,7 +3,7 @@
 Lars de Roos | Web Apps Project
 
 #### Purpose
-The number of students who join student associations has been falling for a long time. This is due to poor publicity and the costs of membership. Yet on the internet the question is often asked "Which student association suits me?". This web application has been designed to respond to this. It serves as a guide for student associations, to find the perfect match as a student!
+The number of students who join student associations has been falling for a long time. This is due to poor publicity and the costs of membership. Yet on the internet the question is often asked "Which student association suits me?". This web application has been designed to respond to this. It serves as a guide for student associations, to find the perfect match as a (future) student!
 
 #### Check the website right here -> [Vo-keur](http://vokeur.herokuapp.com)
 Note to user: in the https version, [this version](https://vokeur.herokuapp.com), the Google Maps API does not work.
