@@ -19,10 +19,13 @@ Make sure that you have a copy of Python 3.7 or higher installed on your machine
 4. In your terminal window, navigate to the `vokeur` folder.
 5. Use `python3 manage.py runserver` to get started. 
 
+If you want to view, change or add data to the models, go to: `http://127.0.0.1:8000/admin`
+Check `vokeur/website/views.py` (superuser) for the login details.
+
 ## Product video
 A video walkthrough of this webapplication can be found via [this link]().
 
-## Screenshots Computer
+## Screenshots Computer (MacBook)
 ##### Homepage
 ![](doc/e1.png)
 ##### Kieswijzer begin
@@ -44,7 +47,7 @@ A video walkthrough of this webapplication can be found via [this link]().
 ##### Contact informatie
 ![](doc/e10.png)
 
-## Screenshots iPhone
+## Screenshots Smartphone (iPhone)
 ![](doc/iphone1.PNG)
 ![](doc/iphone2.PNG)
 ![](doc/iphone3.PNG)
