@@ -19,6 +19,10 @@ if superuser.count() == 0:
     superuser.save()
 
 
+def base_layout(request):
+	return render(request, "index.html")
+
+
 def index(request):
     """
         Initializes the homepage.
