@@ -16,6 +16,14 @@
         </div>
     </blockquote>
 
+    <blockquote class="blockquote text-center">
+        <div class="btn-group" role="group">
+            {% for s in stad %}
+            <div> <button type="button" class="btn btn hvr-float-shadow border-warning"> <a style="color: black; text-decoration: none;" href="{% url 'kieswijzer' s.name %}"> Kieswijzer <strong> {{ s.name }} </strong> </a> </button> </div>
+            {% endfor %}
+        </div>
+    </blockquote>
+
     <div id="select" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner center">
             <div class="carousel-item">
