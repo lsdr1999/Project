@@ -9,20 +9,22 @@
 {% block main %}
 
     <h1 class="text-center"> Contact informatie </h1>
-    <br><br>
+    <br>
+
+    <header id="spinner">
+        <div>
+            <h1> <a style="color: black; text-decoration: none;" href="https://www.instagram.com/vokeur/">Instagram </a> </h1>
+        </div>
+    </header>
+
+    <div class='embedsocial-instagram' data-ref="b4da133be558886deccb22e8b82c8f8f745b4231"></div><script>(function(d, s, id){var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/embedscript/in.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialInstagramScript"));</script>
+
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-10 col-lg-8">
                 <header >
                     <div id="spinner">
-                        <h1 class=""> 'Vo </h1>
-                    </div>
-                    <div class="word">
-                    	<span> Kort &nbsp </span>
-                    	<span> voor &nbsp</span>
-                    	<span> ‘bravo’, &nbsp</span>
-                    	<span> uitroep van &nbsp</span>
-                        <span> waardering &nbsp</span>
+                        <h1 class=""> Vo-keur </h1>
                     </div>
                 </header>
 
@@ -33,27 +35,11 @@
                         <a href="https://github.com/lsdr1999" class="btn btn-warning hvr-float-shadow">GitHub</a>
                     </div>
                     <div class="card-footer text-muted">
-                        Programmeerproject juni 2019
+                        Programmeerproject juni 2019. Cijfer: 9,5
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-    <script>
-        let spans = document.querySelectorAll('.word span');
-        spans.forEach((span, idx) => {
-            span.addEventListener('click', (e) => {
-                e.target.classList.add('active');
-            });
-            span.addEventListener('animationend', (e) => {
-                e.target.classList.remove('active');
-            });
-            // Initial animation
-            setTimeout(() => {
-                span.classList.add('active');
-            }, 750 * (idx+1))
-        });
-    </script>
 
 {% endblock %}

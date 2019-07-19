@@ -36,7 +36,7 @@ class Verenigingen(models.Model):
     jaar = models.DecimalField(max_digits=4, decimal_places=0, null=True, blank=True)
     contributie = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     borrel = models.CharField(max_length=64, null=True, blank=True)
-    ontgroening = models.CharField(max_length=64, null=True, blank=True)
+    introductietijd = models.CharField(max_length=64, null=True, blank=True)
     mail = models.EmailField(max_length=64, null=True, blank=True)
     website = models.URLField(max_length=64, null=True, blank=True)
     lat = models.DecimalField(max_digits=22, decimal_places=16, blank=True, null=True)

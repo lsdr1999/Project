@@ -1,0 +1,46 @@
+Voormalig contact
+
+<div class="word">
+    <span> Kort &nbsp </span>
+    <span> voor &nbsp</span>
+    <span> ‘bravo’, &nbsp</span>
+    <span> uitroep van &nbsp</span>
+    <span> waardering &nbsp</span>
+</div>
+<script>
+    let spans = document.querySelectorAll('.word span');
+    spans.forEach((span, idx) => {
+        span.addEventListener('click', (e) => {
+            e.target.classList.add('active');
+        });
+        span.addEventListener('animationend', (e) => {
+            e.target.classList.remove('active');
+        });
+        // Initial animation
+        setTimeout(() => {
+            span.classList.add('active');
+        }, 750 * (idx+1))
+    });
+</script>
+
+Voormalig woordenlijst
+<h1 class="text-center"> Woordenboek </h1>
+<div class="container">
+    {% csrf_token %}
+    <br><br>
+    {% for woord in woorden %}
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-9 col-lg-7">
+            <div class="card">
+                <div class="card-header">
+                    <strong>{{ woord.woord }}</strong>
+                </div>
+                <div class="card-body">
+                    {{ woord.betekenis }}
+                </div>
+            </div>
+            <br>
+        </div>
+    </div>
+    {% endfor %}
+</div>
