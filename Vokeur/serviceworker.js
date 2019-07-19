@@ -26,3 +26,18 @@ self.addEventListener('fetch', function(event) {
 });
 
 // https://www.freecodecamp.org/news/i-built-a-pwa-and-published-it-in-3-app-stores-heres-what-i-learned-7cb3f56daf9b/
+
+// in settings
+// PWA_SERVICE_WORKER_PATH = os.path.join(BASE_DIR, 'website/static/website', 'serviceworker.js')
+// pwa, toevoegen bij installed apps
+
+// in urls
+// path("", include("pwa.urls")),
+
+// in layout
+// {% load pwa %}
+// {% progressive_web_app_meta %}
+
+// in views
+// def base_layout(request):
+//      return render(request, "index.html")
