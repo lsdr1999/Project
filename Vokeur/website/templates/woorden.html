@@ -9,23 +9,70 @@
 {% block main %}
 
     <h1 class="text-center"> Woordenboek </h1>
+
     <div class="container">
         {% csrf_token %}
         <br><br>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-9 col-lg-7">
-                <div class="card">
-                    <div class="card-header">
-                        <strong>Het woordenboek wordt bijgewerkt.</strong>
-                    </div>
-                    <div class="card-body">
-                        <p> Excuses voor het ongemak. </p>
-                        <p> Volg Vo-keur op <a href="https://www.instagram.com/vokeur/">Instagram </a>voor updates. </p>
+        <ul style="list-style-type: none;">
+            <li>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-9 col-lg-7">
+                        <div class="card">
+                            <div class="card-header">
+                                <strong>Zoekfunctie</strong>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    <input class="form-control" type="text" id="zoekinput" onkeyup="woordzoeker()" placeholder="Zoek een woord of betekenis...">
+                                </div>
+                            </div>
+                        </div>
+                        <br>
                     </div>
                 </div>
-                <br>
-            </div>
-        </div>
+            </li>
+        </ul>
+        <br><br>
+        <ul id="woordenlijst" style="list-style-type: none;">
+            {% for woord in woorden %}
+            <li>
+                <a href="#" style="color: black; text-decoration: none; pointer-events: none; cursor: default;">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-md-9 col-lg-7">
+                            <div class="card">
+                                <div class="card-header">
+                                    <strong>{{ woord.woord }}</strong>
+                                </div>
+                                <div class="card-body">
+                                    {{ woord.betekenis }}
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </div>
+                </a>
+            {% endfor %}
+            </li>
+        </ul>
+
+        <script>
+            function woordzoeker() {
+                var input, filter, ul, li, a, i, txtValue;
+                input = document.getElementById("zoekinput");
+                filter = input.value.toUpperCase();
+                ul = document.getElementById("woordenlijst");
+                li = ul.getElementsByTagName("li");
+                for (i = 0; i < li.length; i++) {
+                    a = li[i].getElementsByTagName("a")[0];
+                    txtValue = a.textContent || a.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        li[i].style.display = "";
+                    } else {
+                        li[i].style.display = "none";
+                    }
+                }
+            }
+        </script>
     </div>
 
 {% endblock %}
