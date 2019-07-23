@@ -107,7 +107,7 @@ def woorden(request):
         Initializes the 'woordenboek' page.
     """
     context = {
-        "woorden": Woorden.objects.all(),
+        "woorden": Woorden.objects.all().order_by('letter'),
         "stad": Stad.objects.all(),
     }
     return render(request, "woorden.html", context)
