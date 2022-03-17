@@ -113,6 +113,16 @@ def woorden(request):
     return render(request, "woorden.html", context)
 
 
+def test(request):
+    """
+        Initializes the homepage.
+    """
+    context = {
+        "stad": Stad.objects.all(),
+    }
+    return render(request, "test.html", context)
+
+
 def contact(request):
     """
         Initializes the contact page.

@@ -9,6 +9,7 @@ urlpatterns = [
   path("kieswijzer/<str:name>/", views.kieswijzer, name="kieswijzer"),
   path("verenigingen/<str:name>/", views.verenigingen, name="verenigingen"),
   path("contact/", views.contact, name="contact"),
+  path("test/", views.test, name="test"),
   path("woorden/", views.woorden, name="woorden"),
   path("api/uitslag", views.uitslag, name="uitslag"),
   path("vereniging/<str:url>/", views.vereniging, name="vereniging"),

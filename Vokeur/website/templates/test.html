@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% load static %}
+
+{% block title %}
+    'Vo Kieswijzer
+{% endblock %}
+
+{% block main %}
+
+    <body>
+      <blockquote class="blockquote text-center">
+          <div class="p-3 mb-2 text-dark" id="nav-color">
+              <h4> Dit is een test </h4>
+              <p class="text-muted" id="flash"> Test test test. </p>
+          </div>
+      </blockquote>
+        <br><br>
+
+        <script src="{% static 'website/script.js' %}"></script>
+    </body>
+
+{% endblock %}
